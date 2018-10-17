@@ -43,10 +43,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/andrew/CLionProjects/Boundaries
+CMAKE_SOURCE_DIR = /Users/andrew/CLionProjects/UB-Bounds/Boundaries
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/andrew/CLionProjects/Boundaries/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Boundaries.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/Boundaries.dir/flags.make
 
 CMakeFiles/Boundaries.dir/main.cpp.o: CMakeFiles/Boundaries.dir/flags.make
 CMakeFiles/Boundaries.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/andrew/CLionProjects/Boundaries/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Boundaries.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Boundaries.dir/main.cpp.o -c /Users/andrew/CLionProjects/Boundaries/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Boundaries.dir/main.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Boundaries.dir/main.cpp.o -c /Users/andrew/CLionProjects/UB-Bounds/Boundaries/main.cpp
 
 CMakeFiles/Boundaries.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Boundaries.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/andrew/CLionProjects/Boundaries/main.cpp > CMakeFiles/Boundaries.dir/main.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/andrew/CLionProjects/UB-Bounds/Boundaries/main.cpp > CMakeFiles/Boundaries.dir/main.cpp.i
 
 CMakeFiles/Boundaries.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Boundaries.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/andrew/CLionProjects/Boundaries/main.cpp -o CMakeFiles/Boundaries.dir/main.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/andrew/CLionProjects/UB-Bounds/Boundaries/main.cpp -o CMakeFiles/Boundaries.dir/main.cpp.s
 
 CMakeFiles/Boundaries.dir/main.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/Boundaries.dir/main.cpp.o.provides.build: CMakeFiles/Boundaries.dir/m
 
 CMakeFiles/Boundaries.dir/Box.cpp.o: CMakeFiles/Boundaries.dir/flags.make
 CMakeFiles/Boundaries.dir/Box.cpp.o: ../Box.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/andrew/CLionProjects/Boundaries/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Boundaries.dir/Box.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Boundaries.dir/Box.cpp.o -c /Users/andrew/CLionProjects/Boundaries/Box.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Boundaries.dir/Box.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Boundaries.dir/Box.cpp.o -c /Users/andrew/CLionProjects/UB-Bounds/Boundaries/Box.cpp
 
 CMakeFiles/Boundaries.dir/Box.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Boundaries.dir/Box.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/andrew/CLionProjects/Boundaries/Box.cpp > CMakeFiles/Boundaries.dir/Box.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/andrew/CLionProjects/UB-Bounds/Boundaries/Box.cpp > CMakeFiles/Boundaries.dir/Box.cpp.i
 
 CMakeFiles/Boundaries.dir/Box.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Boundaries.dir/Box.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/andrew/CLionProjects/Boundaries/Box.cpp -o CMakeFiles/Boundaries.dir/Box.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/andrew/CLionProjects/UB-Bounds/Boundaries/Box.cpp -o CMakeFiles/Boundaries.dir/Box.cpp.s
 
 CMakeFiles/Boundaries.dir/Box.cpp.o.requires:
 
@@ -105,19 +105,97 @@ CMakeFiles/Boundaries.dir/Box.cpp.o.provides: CMakeFiles/Boundaries.dir/Box.cpp.
 CMakeFiles/Boundaries.dir/Box.cpp.o.provides.build: CMakeFiles/Boundaries.dir/Box.cpp.o
 
 
+CMakeFiles/Boundaries.dir/Users/andrew/CLionProjects/UB-Bounds/World.cpp.o: CMakeFiles/Boundaries.dir/flags.make
+CMakeFiles/Boundaries.dir/Users/andrew/CLionProjects/UB-Bounds/World.cpp.o: /Users/andrew/CLionProjects/UB-Bounds/World.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Boundaries.dir/Users/andrew/CLionProjects/UB-Bounds/World.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Boundaries.dir/Users/andrew/CLionProjects/UB-Bounds/World.cpp.o -c /Users/andrew/CLionProjects/UB-Bounds/World.cpp
+
+CMakeFiles/Boundaries.dir/Users/andrew/CLionProjects/UB-Bounds/World.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Boundaries.dir/Users/andrew/CLionProjects/UB-Bounds/World.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/andrew/CLionProjects/UB-Bounds/World.cpp > CMakeFiles/Boundaries.dir/Users/andrew/CLionProjects/UB-Bounds/World.cpp.i
+
+CMakeFiles/Boundaries.dir/Users/andrew/CLionProjects/UB-Bounds/World.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Boundaries.dir/Users/andrew/CLionProjects/UB-Bounds/World.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/andrew/CLionProjects/UB-Bounds/World.cpp -o CMakeFiles/Boundaries.dir/Users/andrew/CLionProjects/UB-Bounds/World.cpp.s
+
+CMakeFiles/Boundaries.dir/Users/andrew/CLionProjects/UB-Bounds/World.cpp.o.requires:
+
+.PHONY : CMakeFiles/Boundaries.dir/Users/andrew/CLionProjects/UB-Bounds/World.cpp.o.requires
+
+CMakeFiles/Boundaries.dir/Users/andrew/CLionProjects/UB-Bounds/World.cpp.o.provides: CMakeFiles/Boundaries.dir/Users/andrew/CLionProjects/UB-Bounds/World.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Boundaries.dir/build.make CMakeFiles/Boundaries.dir/Users/andrew/CLionProjects/UB-Bounds/World.cpp.o.provides.build
+.PHONY : CMakeFiles/Boundaries.dir/Users/andrew/CLionProjects/UB-Bounds/World.cpp.o.provides
+
+CMakeFiles/Boundaries.dir/Users/andrew/CLionProjects/UB-Bounds/World.cpp.o.provides.build: CMakeFiles/Boundaries.dir/Users/andrew/CLionProjects/UB-Bounds/World.cpp.o
+
+
+CMakeFiles/Boundaries.dir/Agent.cpp.o: CMakeFiles/Boundaries.dir/flags.make
+CMakeFiles/Boundaries.dir/Agent.cpp.o: ../Agent.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Boundaries.dir/Agent.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Boundaries.dir/Agent.cpp.o -c /Users/andrew/CLionProjects/UB-Bounds/Boundaries/Agent.cpp
+
+CMakeFiles/Boundaries.dir/Agent.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Boundaries.dir/Agent.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/andrew/CLionProjects/UB-Bounds/Boundaries/Agent.cpp > CMakeFiles/Boundaries.dir/Agent.cpp.i
+
+CMakeFiles/Boundaries.dir/Agent.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Boundaries.dir/Agent.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/andrew/CLionProjects/UB-Bounds/Boundaries/Agent.cpp -o CMakeFiles/Boundaries.dir/Agent.cpp.s
+
+CMakeFiles/Boundaries.dir/Agent.cpp.o.requires:
+
+.PHONY : CMakeFiles/Boundaries.dir/Agent.cpp.o.requires
+
+CMakeFiles/Boundaries.dir/Agent.cpp.o.provides: CMakeFiles/Boundaries.dir/Agent.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Boundaries.dir/build.make CMakeFiles/Boundaries.dir/Agent.cpp.o.provides.build
+.PHONY : CMakeFiles/Boundaries.dir/Agent.cpp.o.provides
+
+CMakeFiles/Boundaries.dir/Agent.cpp.o.provides.build: CMakeFiles/Boundaries.dir/Agent.cpp.o
+
+
+CMakeFiles/Boundaries.dir/World.cpp.o: CMakeFiles/Boundaries.dir/flags.make
+CMakeFiles/Boundaries.dir/World.cpp.o: ../World.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Boundaries.dir/World.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Boundaries.dir/World.cpp.o -c /Users/andrew/CLionProjects/UB-Bounds/Boundaries/World.cpp
+
+CMakeFiles/Boundaries.dir/World.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Boundaries.dir/World.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/andrew/CLionProjects/UB-Bounds/Boundaries/World.cpp > CMakeFiles/Boundaries.dir/World.cpp.i
+
+CMakeFiles/Boundaries.dir/World.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Boundaries.dir/World.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/andrew/CLionProjects/UB-Bounds/Boundaries/World.cpp -o CMakeFiles/Boundaries.dir/World.cpp.s
+
+CMakeFiles/Boundaries.dir/World.cpp.o.requires:
+
+.PHONY : CMakeFiles/Boundaries.dir/World.cpp.o.requires
+
+CMakeFiles/Boundaries.dir/World.cpp.o.provides: CMakeFiles/Boundaries.dir/World.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Boundaries.dir/build.make CMakeFiles/Boundaries.dir/World.cpp.o.provides.build
+.PHONY : CMakeFiles/Boundaries.dir/World.cpp.o.provides
+
+CMakeFiles/Boundaries.dir/World.cpp.o.provides.build: CMakeFiles/Boundaries.dir/World.cpp.o
+
+
 # Object files for target Boundaries
 Boundaries_OBJECTS = \
 "CMakeFiles/Boundaries.dir/main.cpp.o" \
-"CMakeFiles/Boundaries.dir/Box.cpp.o"
+"CMakeFiles/Boundaries.dir/Box.cpp.o" \
+"CMakeFiles/Boundaries.dir/Users/andrew/CLionProjects/UB-Bounds/World.cpp.o" \
+"CMakeFiles/Boundaries.dir/Agent.cpp.o" \
+"CMakeFiles/Boundaries.dir/World.cpp.o"
 
 # External object files for target Boundaries
 Boundaries_EXTERNAL_OBJECTS =
 
 Boundaries: CMakeFiles/Boundaries.dir/main.cpp.o
 Boundaries: CMakeFiles/Boundaries.dir/Box.cpp.o
+Boundaries: CMakeFiles/Boundaries.dir/Users/andrew/CLionProjects/UB-Bounds/World.cpp.o
+Boundaries: CMakeFiles/Boundaries.dir/Agent.cpp.o
+Boundaries: CMakeFiles/Boundaries.dir/World.cpp.o
 Boundaries: CMakeFiles/Boundaries.dir/build.make
 Boundaries: CMakeFiles/Boundaries.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/andrew/CLionProjects/Boundaries/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Boundaries"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Boundaries"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Boundaries.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -127,6 +205,9 @@ CMakeFiles/Boundaries.dir/build: Boundaries
 
 CMakeFiles/Boundaries.dir/requires: CMakeFiles/Boundaries.dir/main.cpp.o.requires
 CMakeFiles/Boundaries.dir/requires: CMakeFiles/Boundaries.dir/Box.cpp.o.requires
+CMakeFiles/Boundaries.dir/requires: CMakeFiles/Boundaries.dir/Users/andrew/CLionProjects/UB-Bounds/World.cpp.o.requires
+CMakeFiles/Boundaries.dir/requires: CMakeFiles/Boundaries.dir/Agent.cpp.o.requires
+CMakeFiles/Boundaries.dir/requires: CMakeFiles/Boundaries.dir/World.cpp.o.requires
 
 .PHONY : CMakeFiles/Boundaries.dir/requires
 
@@ -135,6 +216,6 @@ CMakeFiles/Boundaries.dir/clean:
 .PHONY : CMakeFiles/Boundaries.dir/clean
 
 CMakeFiles/Boundaries.dir/depend:
-	cd /Users/andrew/CLionProjects/Boundaries/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/andrew/CLionProjects/Boundaries /Users/andrew/CLionProjects/Boundaries /Users/andrew/CLionProjects/Boundaries/cmake-build-debug /Users/andrew/CLionProjects/Boundaries/cmake-build-debug /Users/andrew/CLionProjects/Boundaries/cmake-build-debug/CMakeFiles/Boundaries.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/andrew/CLionProjects/UB-Bounds/Boundaries /Users/andrew/CLionProjects/UB-Bounds/Boundaries /Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug /Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug /Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/CMakeFiles/Boundaries.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Boundaries.dir/depend
 

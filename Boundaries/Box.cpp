@@ -4,6 +4,7 @@
 
 #include "Box.h"
 #include "QGeoCoordinate.h"
+#include "Agent.h"
 
 Box::Box(){}
 Box::Box(QGeoCoordinate p1, QGeoCoordinate p2){
@@ -28,12 +29,22 @@ Box::Box(QGeoCoordinate p1, QGeoCoordinate p2){
     se = QGeoCoordinate(south, east);
     sw = QGeoCoordinate(south, west);
     
+    n= QGeoCoordinate(north, (west+(west-east)/2));
+    s=QGeoCoordinate(south, (west+(west-east)/2));
+    e=QGeoCoordinate(north+(north-south)/2, east);
+    w=QGeoCoordinate(north+(north-south)/2, west);
+    
 }
 Box::Box(double north, double south, double east, double west) : north(north), south(south), east(east), west(west){
     nw = QGeoCoordinate(north, west);
     ne = QGeoCoordinate(north, east);
     se = QGeoCoordinate(south, east);
     sw = QGeoCoordinate(south, west);
+    
+    n= QGeoCoordinate(north, (west+(west-east)/2));
+    s=QGeoCoordinate(south, (west+(west-east)/2));
+    e=QGeoCoordinate(south+(north-south)/2, east);
+    w=QGeoCoordinate(south+(north-south)/2, west);
 
 }
 Box::Box(const Box &other){
@@ -55,15 +66,47 @@ double Box::comDist(QGeoCoordinate loc){
 
 }
 
-bool Box::isNear(QgeoCoordinate loc){
-
-
+bool Box::isNear(Agent::Agent a){
+    double d=0;
+    if(a.lat>=north){
+        if(a.lon<west){//nw corner
+            d=a.loc.distanceTo(nw);
+        } else if (a.lon>east){//ne corner
+            d=a.loc.distanceTo(ne);
+        } else {//north
+            d=a.loc.distanceTo(QGeoCoordinate::QGeoCoordinate(north, a.lon));;
+        }
+        
+    } else {
+        if(a.lat<=south){
+            if(a.lon<west){//sw corner
+                d=a.loc.distanceTo(sw);
+            } else if (a.lon>east){//se corner
+                d=a.loc.distanceTo(se);
+            } else {//south
+                d=a.loc.distanceTo(QGeoCoordinate::QGeoCoordinate(south, a.lon));
+            }
+        if(a.lon<=west){//west
+            d=west-a.lon;
+        } else if(a.lon>=east){//east
+                d=a.lon-east;
+            } else {//inside
+                d=0;
+            }
+        }
+    }
+    
+    if (d<=DISTANCE_OF_IRRELEVANCE){
+        return true;
+    }
+    
+    return false;
 }
 
 QGeoCoordinate Box::reflect(QGeoCoordinate loc, double bearing){
 
 }
-QGeoCoordinate Box::reflect(Vehicle mav){
+QGeoCoordinate Box::reflect(Agent a){
 
 }
 
@@ -75,39 +118,57 @@ double Box::getN(){return north;}
 double Box::getS(){return south;}
 double Box::getE(){return east;}
 double Box::getW(){return west;}
+double getDist(){return dist;}
 
 QGeoCoordinate Box::getNW(){return nw;}
 QGeoCoordinate Box::getNE(){return ne;}
 QGeoCoordinate Box::getSE(){return se;}
 QGeoCoordinate Box::getSW(){return sw;}
 
-bool Box::setN(double n){
-    north = n;
-    nw.setLatitude(n);
-    ne.setLatitude(n);
+bool Box::setN(double x){
+    north = x;
+    nw.setLatitude(x);
+    ne.setLatitude(x);
+    n= QGeoCoordinate(north, (west+(west-east)/2));
+    e=QGeoCoordinate(south+(north-south)/2, east);
+    w=QGeoCoordinate(south+(north-south)/2, west);
     return true;
 
 }
-bool Box::setS(double s){
-    south = s;
-    se.setLatitude(s);
-    sw.setLatitude(s);
+bool Box::setS(double x){
+    south = x;
+    se.setLatitude(x);
+    sw.setLatitude(x);
+    s=QGeoCoordinate(south, (west+(west-east)/2));
+    e=QGeoCoordinate(south+(north-south)/2, east);
+    w=QGeoCoordinate(south+(north-south)/2, west);
     return true;
 
 }
-bool Box::setE(double e){
-    east = e;
-    ne.setLongitude(e);
-    se.setLongitude(e);
+bool Box::setE(double x){
+    east = x;
+    ne.setLongitude(x);
+    se.setLongitude(x);
+    n= QGeoCoordinate(north, (west+(west-east)/2));
+    s=QGeoCoordinate(south, (west+(west-east)/2));
+    e=QGeoCoordinate(south+(north-south)/2, east);
     return true;
 
 }
-bool Box::setW(double w){
-    west = w;
-    nw.setLongitude(w);
-    sw.setLongitude(w);
+bool Box::setW(double x){
+    west = x;
+    nw.setLongitude(x);
+    sw.setLongitude(x);
+    n= QGeoCoordinate(north, (west+(west-east)/2));
+    s=QGeoCoordinate(south, (west+(west-east)/2));
+    w=QGeoCoordinate(south+(north-south)/2, west);
     return true;
 
+}
+
+bool setDist(double d){
+    dist = d;
+    return true;
 }
 
 bool Box::setNW(QGeoCoordinate point){

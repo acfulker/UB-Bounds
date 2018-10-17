@@ -5,15 +5,17 @@
 #ifndef BOUNDARIES_BOX_H
 #define BOUNDARIES_BOX_H
 
+#include "QGeoCoordinate.h"
 #define DISTANCE_OF_IRRELEVANCE = 50;
 
 class Box {
 private:
     //These should be the same data
     double north, south, east, west;//Boundaries in latitude and longitude
-    QGeoCoordinate nw, ne, se, sw;//Boundary corners as QGC
+    QGeoCoordinate nw, ne, se, sw, n, s, e ,w;//Boundary corners as QGC
     double borderDistance;
     double threshold;
+    double dist;
     
     void determineThreshold();
     
@@ -25,7 +27,7 @@ public:
     ~Box();
     
     double comDist(QGeoCoordinate loc);//Returns sum of distances to each corner
-    bool isNear(QgeoCoordinate loc);//Returns true if loc is within approx. DISTANCE_OF_IRRELEVANCE from the bounding box
+    bool isNear(Agent a);//Returns true if a is within approx. DISTANCE_OF_IRRELEVANCE from the bounding box
     
     
     QGeoCoordinate reflect(QGeoCoordinate loc, double bearing);//Returns a coordinate in the direction of reflection
@@ -33,10 +35,14 @@ public:
     
     bool Box::setCorner(QGeoCoordinate point);
     
+    
+    
     double getN();
     double getS();
     double getE();
     double getW();
+    
+    double getDist();
     
     QGeoCoordinate getNW();
     QGeoCoordinate getNE();
@@ -49,6 +55,8 @@ public:
     bool setS(double s);
     bool setE(double e);
     bool setW(double w);
+    
+    bool setDist(double d);
     
     bool setNW(QGeoCoordinate point);
     bool setNE(QGeoCoordinate point);

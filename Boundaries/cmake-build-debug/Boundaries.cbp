@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/andrew/CLionProjects/Boundaries/cmake-build-debug"/>
+				<Option working_dir="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/andrew/CLionProjects/Boundaries/cmake-build-debug"/>
+				<Option working_dir="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/andrew/CLionProjects/Boundaries/cmake-build-debug"/>
+				<Option working_dir="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Boundaries">
-				<Option output="/Users/andrew/CLionProjects/Boundaries/cmake-build-debug/Boundaries" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/andrew/CLionProjects/Boundaries/cmake-build-debug"/>
+				<Option output="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Boundaries" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -51,15 +51,15 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 Boundaries"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 Boundaries"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Boundaries/fast">
-				<Option output="/Users/andrew/CLionProjects/Boundaries/cmake-build-debug/Boundaries" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/andrew/CLionProjects/Boundaries/cmake-build-debug"/>
+				<Option output="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Boundaries" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -71,23 +71,41 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 Boundaries/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 Boundaries/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/andrew/CLionProjects/Boundaries/Box.cpp">
+		<Unit filename="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/Agent.cpp">
 			<Option target="Boundaries"/>
 		</Unit>
-		<Unit filename="/Users/andrew/CLionProjects/Boundaries/Box.h">
+		<Unit filename="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/Agent.h">
 			<Option target="Boundaries"/>
 		</Unit>
-		<Unit filename="/Users/andrew/CLionProjects/Boundaries/main.cpp">
+		<Unit filename="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/Box.cpp">
 			<Option target="Boundaries"/>
 		</Unit>
-		<Unit filename="/Users/andrew/CLionProjects/Boundaries/CMakeLists.txt">
+		<Unit filename="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/Box.h">
+			<Option target="Boundaries"/>
+		</Unit>
+		<Unit filename="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/World.cpp">
+			<Option target="Boundaries"/>
+		</Unit>
+		<Unit filename="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/World.h">
+			<Option target="Boundaries"/>
+		</Unit>
+		<Unit filename="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/main.cpp">
+			<Option target="Boundaries"/>
+		</Unit>
+		<Unit filename="/Users/andrew/CLionProjects/UB-Bounds/World.cpp">
+			<Option target="Boundaries"/>
+		</Unit>
+		<Unit filename="/Users/andrew/CLionProjects/UB-Bounds/World.h">
+			<Option target="Boundaries"/>
+		</Unit>
+		<Unit filename="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

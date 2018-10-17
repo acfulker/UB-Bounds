@@ -1,6 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Boundaries.dir/main.cpp.o"
   "CMakeFiles/Boundaries.dir/Box.cpp.o"
+  "CMakeFiles/Boundaries.dir/Users/andrew/CLionProjects/UB-Bounds/World.cpp.o"
+  "CMakeFiles/Boundaries.dir/Agent.cpp.o"
+  "CMakeFiles/Boundaries.dir/World.cpp.o"
   "Boundaries.pdb"
   "Boundaries"
 )
