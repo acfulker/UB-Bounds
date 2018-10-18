@@ -19,7 +19,8 @@ public:
     World(const World &other);
     ~World();
     
-    std::priority_queue<Box::Box, std:vector<Box::Box, > Near(QGeoCoordinate loc);
+    std::priority_queue<Box::Box> Near(Agent a);
+    bool add(Box::Box b);
     
 };
 

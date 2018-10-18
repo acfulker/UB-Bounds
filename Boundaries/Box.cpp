@@ -47,25 +47,43 @@ Box::Box(double north, double south, double east, double west) : north(north), s
     w=QGeoCoordinate(south+(north-south)/2, west);
 
 }
-Box::Box(const Box &other){
-
-}
+Box::Box(const Box &other){}
 Box::~Box(){
     delete nw;
     delete ne;
     delete se;
     delete sw;
 }
+/**
+ *Less than operator for comparisons in priority queue
+ * @param other
+ * @return if this is closer to agent than other
+ */
+bool operator<(Box &other){
+    return getDist()<other.getDist();
+    
+}
 
+/**
+ *
+ */
 void Box::determineThreshold() {
     threshold = nw.distanceTo(sw) + nw.distanceTo(se) + nw.distanceTo(ne);
 }
-
+/**
+ *
+ * @param loc
+ * @return
+ */
 double Box::comDist(QGeoCoordinate loc){
     return loc.distanceTo(nw) + loc.distanceTo(ne) + loc.distanceTo(se) + loc.distanceTo(sw);
 
 }
-
+/**
+ *
+ * @param a agent object for drone in search
+ * @return true if
+ */
 bool Box::isNear(Agent::Agent a){
     double d=0;
     if(a.lat>=north){
@@ -95,6 +113,8 @@ bool Box::isNear(Agent::Agent a){
             }
         }
     }
+    
+    setDist(d);
     
     if (d<=DISTANCE_OF_IRRELEVANCE){
         return true;

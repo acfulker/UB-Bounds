@@ -6,6 +6,8 @@
 #define BOUNDARIES_AGENT_H
 
 #include "QGeoCoordinate.h"
+#include "Box.h"
+#include "World.h"
 
 class Agent {
 private:
@@ -13,6 +15,13 @@ private:
 public:
     QGeoCoordinate loc;
     double lat, lon;
+    
+    Agent();
+    ~Agent();
+    Agent(QGeoCoordinate coord) : loc(coord) {};
+    
+    
+    
 };
 
 

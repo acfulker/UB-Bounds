@@ -26,6 +26,7 @@ public:
     Box(const Box &other);
     ~Box();
     
+    bool operator<(Box &other);
     double comDist(QGeoCoordinate loc);//Returns sum of distances to each corner
     bool isNear(Agent a);//Returns true if a is within approx. DISTANCE_OF_IRRELEVANCE from the bounding box
     
