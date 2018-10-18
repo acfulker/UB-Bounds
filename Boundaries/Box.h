@@ -17,8 +17,6 @@ private:
     double threshold;
     double dist;
     
-    void determineThreshold();
-    
 public:
     Box();
     Box(QGeoCoordinate p1, QGeoCoordinate p2);
@@ -27,7 +25,6 @@ public:
     ~Box();
     
     bool operator<(Box &other);
-    double comDist(QGeoCoordinate loc);//Returns sum of distances to each corner
     bool isNear(Agent a);//Returns true if a is within approx. DISTANCE_OF_IRRELEVANCE from the bounding box
     
     
@@ -50,20 +47,7 @@ public:
     QGeoCoordinate getSE();
     QGeoCoordinate getSW();
     
-    
-    //Returns true if the value was set
-    bool setN(double n);
-    bool setS(double s);
-    bool setE(double e);
-    bool setW(double w);
-    
-    bool setDist(double d);
-    
-    bool setNW(QGeoCoordinate point);
-    bool setNE(QGeoCoordinate point);
-    bool setSE(QGeoCoordinate point);
-    bool setSW(QGeoCoordinate point);
-
+    void setDist(double d);
 };
 
 
