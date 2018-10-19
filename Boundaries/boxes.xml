@@ -1,0 +1,17 @@
+<noflyzones>
+    <zone name="Alumni Arena">
+        <point lat="57.2", long="48.23" />
+        <point lat="57.2", long="48.23" />
+        <point lat="57.2", long="48.23" />
+        <point lat="57.2", long="48.23" />
+    </zone>
+    
+    <zone name="Stadium">
+        <point lat="57.2", long="48.23" />
+        <point lat="57.2", long="48.23" />
+        <point lat="57.2", long="48.23" />
+        <point lat="57.2", long="48.23" />
+    </zone>    
+
+</noflyzones>
+
