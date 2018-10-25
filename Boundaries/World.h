@@ -9,6 +9,7 @@
 #include <queue>
 #include "Box.h"
 #include "Agent.h"
+#include "Coord.h"
 
 class World {
 private:
@@ -19,7 +20,7 @@ public:
     World(const World &other);
     ~World();
     
-    std::priority_queue<Box::Box> Near(Agent a);
+    std::queue<Box::Box> Near(Agent a);
     bool add(Box::Box b);
     
 };

@@ -5,12 +5,12 @@
 #include "Agent.h"
 
 Agent::Agent(){
-    loc = QGeoCoordinate::QGeoCoordinate();
+    loc = Coord::Coord();
     lat = 0;
     lon = 0;
 }
 
-Agent::Agent(QGeoCoordinate coord) {
+Agent::Agent(Coord coord) {
     lat = coord.latitude();
     lon = coord.longitude();
 }

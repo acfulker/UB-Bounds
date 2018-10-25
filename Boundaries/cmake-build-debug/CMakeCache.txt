@@ -192,8 +192,53 @@ CMAKE_STRIP:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/Xcode
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Path to a file.
+GlibConfig_INCLUDE_DIR:PATH=/usr/local/lib/glib-2.0/include
+
+//Path to a file.
+Glib_INCLUDE_DIR:PATH=/usr/local/include/glib-2.0
+
+//Path to a library.
+Glib_LIBRARY:FILEPATH=/usr/local/lib/libglib-2.0.dylib
+
+//Path to a file.
+GlibmmConfig_INCLUDE_DIR:PATH=/usr/local/lib/glibmm-2.4/include
+
+//Path to a file.
+Glibmm_INCLUDE_DIR:PATH=/usr/local/include/glibmm-2.4
+
+//Path to a library.
+Glibmm_LIBRARY:FILEPATH=/usr/local/lib/libglibmm-2.4.dylib
+
+//Path to a file.
+LibXML++Config_INCLUDE_DIR:PATH=/usr/local/lib/libxml++-2.6/include
+
+//Path to a file.
+LibXML++_INCLUDE_DIR:PATH=/usr/local/include/libxml++-2.6
+
+//Path to a library.
+LibXML++_LIBRARY:FILEPATH=/usr/local/lib/libxml++-2.6.dylib
+
+//Path to a file.
+LibXML2_INCLUDE_DIR:PATH=/usr/include/libxml2
+
+//Path to a library.
+LibXML2_LIBRARY:FILEPATH=/usr/lib/libxml2.dylib
+
+//pkg-config executable
+PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/local/bin/pkg-config
+
 //Path to a program.
 ProcessorCount_cmd_sysctl:FILEPATH=/usr/sbin/sysctl
+
+//Path to a file.
+SigC++Config_INCLUDE_DIR:PATH=/usr/local/lib/sigc++-2.0/include
+
+//Path to a file.
+SigC++_INCLUDE_DIR:PATH=/usr/local/include/sigc++-2.0
+
+//Path to a library.
+SigC++_LIBRARY:FILEPATH=/usr/local/lib/libsigc-2.0.dylib
 
 
 ########################
@@ -335,6 +380,215 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding PkgConfig
+FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/local/bin/pkg-config][v0.29.2()]
+//ADVANCED property for variable: GlibConfig_INCLUDE_DIR
+GlibConfig_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Glib_INCLUDE_DIR
+Glib_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Glib_LIBRARY
+Glib_LIBRARY-ADVANCED:INTERNAL=1
+Glib_PKGCONF_CFLAGS:INTERNAL=-I/usr/local/Cellar/glib/2.58.1/include/glib-2.0;-I/usr/local/Cellar/glib/2.58.1/lib/glib-2.0/include;-I/usr/local/opt/gettext/include;-I/usr/local/Cellar/pcre/8.42/include
+Glib_PKGCONF_CFLAGS_I:INTERNAL=
+Glib_PKGCONF_CFLAGS_OTHER:INTERNAL=
+Glib_PKGCONF_FOUND:INTERNAL=1
+Glib_PKGCONF_INCLUDEDIR:INTERNAL=/usr/local/Cellar/glib/2.58.1/include
+Glib_PKGCONF_INCLUDE_DIRS:INTERNAL=/usr/local/Cellar/glib/2.58.1/include/glib-2.0;/usr/local/Cellar/glib/2.58.1/lib/glib-2.0/include;/usr/local/opt/gettext/include;/usr/local/Cellar/pcre/8.42/include
+Glib_PKGCONF_LDFLAGS:INTERNAL=-L/usr/local/Cellar/glib/2.58.1/lib;-L/usr/local/opt/gettext/lib;-lglib-2.0;-lintl;-Wl,-framework;-Wl,CoreFoundation
+Glib_PKGCONF_LDFLAGS_OTHER:INTERNAL=-Wl,-framework;-Wl,CoreFoundation
+Glib_PKGCONF_LIBDIR:INTERNAL=/usr/local/Cellar/glib/2.58.1/lib
+Glib_PKGCONF_LIBRARIES:INTERNAL=glib-2.0;intl
+Glib_PKGCONF_LIBRARY_DIRS:INTERNAL=/usr/local/Cellar/glib/2.58.1/lib;/usr/local/opt/gettext/lib
+Glib_PKGCONF_LIBS:INTERNAL=
+Glib_PKGCONF_LIBS_L:INTERNAL=
+Glib_PKGCONF_LIBS_OTHER:INTERNAL=
+Glib_PKGCONF_LIBS_PATHS:INTERNAL=
+Glib_PKGCONF_PREFIX:INTERNAL=/usr/local/Cellar/glib/2.58.1
+Glib_PKGCONF_STATIC_CFLAGS:INTERNAL=-I/usr/local/Cellar/glib/2.58.1/include/glib-2.0;-I/usr/local/Cellar/glib/2.58.1/lib/glib-2.0/include;-I/usr/local/opt/gettext/include;-I/usr/local/Cellar/pcre/8.42/include
+Glib_PKGCONF_STATIC_CFLAGS_I:INTERNAL=
+Glib_PKGCONF_STATIC_CFLAGS_OTHER:INTERNAL=
+Glib_PKGCONF_STATIC_INCLUDE_DIRS:INTERNAL=/usr/local/Cellar/glib/2.58.1/include/glib-2.0;/usr/local/Cellar/glib/2.58.1/lib/glib-2.0/include;/usr/local/opt/gettext/include;/usr/local/Cellar/pcre/8.42/include
+Glib_PKGCONF_STATIC_LDFLAGS:INTERNAL=-L/usr/local/Cellar/glib/2.58.1/lib;-L/usr/local/opt/gettext/lib;-L/usr/local/Cellar/pcre/8.42/lib;-lglib-2.0;-lintl;-Wl,-framework;-Wl,CoreFoundation;-lpcre;-lintl;-Wl,-framework;-Wl,CoreFoundation;-liconv;-Wl,-framework,Carbon;-Wl,-framework,Foundation;-Wl,-framework,AppKit;-lpcre;-D_THREAD_SAFE;-pthread
+Glib_PKGCONF_STATIC_LDFLAGS_OTHER:INTERNAL=-Wl,-framework;-Wl,CoreFoundation;-Wl,-framework,Carbon;-Wl,-framework,Foundation;-Wl,-framework,AppKit;-D_THREAD_SAFE;-pthread
+Glib_PKGCONF_STATIC_LIBDIR:INTERNAL=
+Glib_PKGCONF_STATIC_LIBRARIES:INTERNAL=glib-2.0;intl;pcre;intl;iconv;pcre
+Glib_PKGCONF_STATIC_LIBRARY_DIRS:INTERNAL=/usr/local/Cellar/glib/2.58.1/lib;/usr/local/opt/gettext/lib;/usr/local/Cellar/pcre/8.42/lib
+Glib_PKGCONF_STATIC_LIBS:INTERNAL=
+Glib_PKGCONF_STATIC_LIBS_L:INTERNAL=
+Glib_PKGCONF_STATIC_LIBS_OTHER:INTERNAL=
+Glib_PKGCONF_STATIC_LIBS_PATHS:INTERNAL=
+Glib_PKGCONF_VERSION:INTERNAL=2.58.1
+Glib_PKGCONF_glib-2.0_INCLUDEDIR:INTERNAL=
+Glib_PKGCONF_glib-2.0_LIBDIR:INTERNAL=
+Glib_PKGCONF_glib-2.0_PREFIX:INTERNAL=
+Glib_PKGCONF_glib-2.0_VERSION:INTERNAL=
+//ADVANCED property for variable: GlibmmConfig_INCLUDE_DIR
+GlibmmConfig_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Glibmm_INCLUDE_DIR
+Glibmm_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Glibmm_LIBRARY
+Glibmm_LIBRARY-ADVANCED:INTERNAL=1
+Glibmm_PKGCONF_CFLAGS:INTERNAL=-I/usr/local/Cellar/glibmm/2.56.0_1/include/glibmm-2.4;-I/usr/local/Cellar/glibmm/2.56.0_1/lib/glibmm-2.4/include;-I/usr/local/Cellar/glib/2.58.1/include/glib-2.0;-I/usr/local/Cellar/glib/2.58.1/lib/glib-2.0/include;-I/usr/local/opt/gettext/include;-I/usr/local/Cellar/pcre/8.42/include;-I/usr/local/Cellar/libsigc++/2.10.0/include/sigc++-2.0;-I/usr/local/Cellar/libsigc++/2.10.0/lib/sigc++-2.0/include
+Glibmm_PKGCONF_CFLAGS_I:INTERNAL=
+Glibmm_PKGCONF_CFLAGS_OTHER:INTERNAL=
+Glibmm_PKGCONF_FOUND:INTERNAL=1
+Glibmm_PKGCONF_INCLUDEDIR:INTERNAL=/usr/local/Cellar/glibmm/2.56.0_1/include
+Glibmm_PKGCONF_INCLUDE_DIRS:INTERNAL=/usr/local/Cellar/glibmm/2.56.0_1/include/glibmm-2.4;/usr/local/Cellar/glibmm/2.56.0_1/lib/glibmm-2.4/include;/usr/local/Cellar/glib/2.58.1/include/glib-2.0;/usr/local/Cellar/glib/2.58.1/lib/glib-2.0/include;/usr/local/opt/gettext/include;/usr/local/Cellar/pcre/8.42/include;/usr/local/Cellar/libsigc++/2.10.0/include/sigc++-2.0;/usr/local/Cellar/libsigc++/2.10.0/lib/sigc++-2.0/include
+Glibmm_PKGCONF_LDFLAGS:INTERNAL=-L/usr/local/Cellar/glibmm/2.56.0_1/lib;-L/usr/local/Cellar/glib/2.58.1/lib;-L/usr/local/opt/gettext/lib;-L/usr/local/Cellar/libsigc++/2.10.0/lib;-lglibmm-2.4;-lgobject-2.0;-lglib-2.0;-lintl;-Wl,-framework;-Wl,CoreFoundation;-lsigc-2.0
+Glibmm_PKGCONF_LDFLAGS_OTHER:INTERNAL=-Wl,-framework;-Wl,CoreFoundation
+Glibmm_PKGCONF_LIBDIR:INTERNAL=/usr/local/Cellar/glibmm/2.56.0_1/lib
+Glibmm_PKGCONF_LIBRARIES:INTERNAL=glibmm-2.4;gobject-2.0;glib-2.0;intl;sigc-2.0
+Glibmm_PKGCONF_LIBRARY_DIRS:INTERNAL=/usr/local/Cellar/glibmm/2.56.0_1/lib;/usr/local/Cellar/glib/2.58.1/lib;/usr/local/opt/gettext/lib;/usr/local/Cellar/libsigc++/2.10.0/lib
+Glibmm_PKGCONF_LIBS:INTERNAL=
+Glibmm_PKGCONF_LIBS_L:INTERNAL=
+Glibmm_PKGCONF_LIBS_OTHER:INTERNAL=
+Glibmm_PKGCONF_LIBS_PATHS:INTERNAL=
+Glibmm_PKGCONF_PREFIX:INTERNAL=/usr/local/Cellar/glibmm/2.56.0_1
+Glibmm_PKGCONF_STATIC_CFLAGS:INTERNAL=-I/usr/local/Cellar/glibmm/2.56.0_1/include/glibmm-2.4;-I/usr/local/Cellar/glibmm/2.56.0_1/lib/glibmm-2.4/include;-I/usr/local/Cellar/glib/2.58.1/include/glib-2.0;-I/usr/local/Cellar/glib/2.58.1/lib/glib-2.0/include;-I/usr/local/opt/gettext/include;-I/usr/local/Cellar/pcre/8.42/include;-I/usr/local/Cellar/libsigc++/2.10.0/include/sigc++-2.0;-I/usr/local/Cellar/libsigc++/2.10.0/lib/sigc++-2.0/include
+Glibmm_PKGCONF_STATIC_CFLAGS_I:INTERNAL=
+Glibmm_PKGCONF_STATIC_CFLAGS_OTHER:INTERNAL=
+Glibmm_PKGCONF_STATIC_INCLUDE_DIRS:INTERNAL=/usr/local/Cellar/glibmm/2.56.0_1/include/glibmm-2.4;/usr/local/Cellar/glibmm/2.56.0_1/lib/glibmm-2.4/include;/usr/local/Cellar/glib/2.58.1/include/glib-2.0;/usr/local/Cellar/glib/2.58.1/lib/glib-2.0/include;/usr/local/opt/gettext/include;/usr/local/Cellar/pcre/8.42/include;/usr/local/Cellar/libsigc++/2.10.0/include/sigc++-2.0;/usr/local/Cellar/libsigc++/2.10.0/lib/sigc++-2.0/include
+Glibmm_PKGCONF_STATIC_LDFLAGS:INTERNAL=-L/usr/local/Cellar/glibmm/2.56.0_1/lib;-L/usr/local/Cellar/glib/2.58.1/lib;-L/usr/local/Cellar/libffi/3.2.1/lib;-L/usr/local/Cellar/glib/2.58.1/lib;-L/usr/local/opt/gettext/lib;-L/usr/local/Cellar/pcre/8.42/lib;-L/usr/local/Cellar/libsigc++/2.10.0/lib;-lglibmm-2.4;-lgobject-2.0;-lffi;-lglib-2.0;-lintl;-Wl,-framework;-Wl,CoreFoundation;-lpcre;-lintl;-Wl,-framework;-Wl,CoreFoundation;-liconv;-Wl,-framework,Carbon;-Wl,-framework,Foundation;-Wl,-framework,AppKit;-lpcre;-D_THREAD_SAFE;-pthread;-lsigc-2.0
+Glibmm_PKGCONF_STATIC_LDFLAGS_OTHER:INTERNAL=-Wl,-framework;-Wl,CoreFoundation;-Wl,-framework,Carbon;-Wl,-framework,Foundation;-Wl,-framework,AppKit;-D_THREAD_SAFE;-pthread
+Glibmm_PKGCONF_STATIC_LIBDIR:INTERNAL=
+Glibmm_PKGCONF_STATIC_LIBRARIES:INTERNAL=glibmm-2.4;gobject-2.0;ffi;glib-2.0;intl;pcre;intl;iconv;pcre;sigc-2.0
+Glibmm_PKGCONF_STATIC_LIBRARY_DIRS:INTERNAL=/usr/local/Cellar/glibmm/2.56.0_1/lib;/usr/local/Cellar/glib/2.58.1/lib;/usr/local/Cellar/libffi/3.2.1/lib;/usr/local/Cellar/glib/2.58.1/lib;/usr/local/opt/gettext/lib;/usr/local/Cellar/pcre/8.42/lib;/usr/local/Cellar/libsigc++/2.10.0/lib
+Glibmm_PKGCONF_STATIC_LIBS:INTERNAL=
+Glibmm_PKGCONF_STATIC_LIBS_L:INTERNAL=
+Glibmm_PKGCONF_STATIC_LIBS_OTHER:INTERNAL=
+Glibmm_PKGCONF_STATIC_LIBS_PATHS:INTERNAL=
+Glibmm_PKGCONF_VERSION:INTERNAL=2.56.0
+Glibmm_PKGCONF_glibmm-2.4_INCLUDEDIR:INTERNAL=
+Glibmm_PKGCONF_glibmm-2.4_LIBDIR:INTERNAL=
+Glibmm_PKGCONF_glibmm-2.4_PREFIX:INTERNAL=
+Glibmm_PKGCONF_glibmm-2.4_VERSION:INTERNAL=
+//ADVANCED property for variable: LibXML++Config_INCLUDE_DIR
+LibXML++Config_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: LibXML++_INCLUDE_DIR
+LibXML++_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: LibXML++_LIBRARY
+LibXML++_LIBRARY-ADVANCED:INTERNAL=1
+LibXML++_PKGCONF_CFLAGS:INTERNAL=-I/usr/local/Cellar/libxml++/2.40.1/include/libxml++-2.6;-I/usr/local/Cellar/libxml++/2.40.1/lib/libxml++-2.6/include;-I/usr/local/Cellar/glibmm/2.56.0_1/include/glibmm-2.4;-I/usr/local/Cellar/glibmm/2.56.0_1/lib/glibmm-2.4/include;-I/usr/local/Cellar/glib/2.58.1/include/glib-2.0;-I/usr/local/Cellar/glib/2.58.1/lib/glib-2.0/include;-I/usr/local/opt/gettext/include;-I/usr/local/Cellar/pcre/8.42/include;-I/usr/local/Cellar/libsigc++/2.10.0/include/sigc++-2.0;-I/usr/local/Cellar/libsigc++/2.10.0/lib/sigc++-2.0/include;-I/usr/include/libxml2
+LibXML++_PKGCONF_CFLAGS_I:INTERNAL=
+LibXML++_PKGCONF_CFLAGS_OTHER:INTERNAL=
+LibXML++_PKGCONF_FOUND:INTERNAL=1
+LibXML++_PKGCONF_INCLUDEDIR:INTERNAL=/usr/local/Cellar/libxml++/2.40.1/include
+LibXML++_PKGCONF_INCLUDE_DIRS:INTERNAL=/usr/local/Cellar/libxml++/2.40.1/include/libxml++-2.6;/usr/local/Cellar/libxml++/2.40.1/lib/libxml++-2.6/include;/usr/local/Cellar/glibmm/2.56.0_1/include/glibmm-2.4;/usr/local/Cellar/glibmm/2.56.0_1/lib/glibmm-2.4/include;/usr/local/Cellar/glib/2.58.1/include/glib-2.0;/usr/local/Cellar/glib/2.58.1/lib/glib-2.0/include;/usr/local/opt/gettext/include;/usr/local/Cellar/pcre/8.42/include;/usr/local/Cellar/libsigc++/2.10.0/include/sigc++-2.0;/usr/local/Cellar/libsigc++/2.10.0/lib/sigc++-2.0/include;/usr/include/libxml2
+LibXML++_PKGCONF_LDFLAGS:INTERNAL=-L/usr/local/Cellar/libxml++/2.40.1/lib;-L/usr/local/Cellar/glibmm/2.56.0_1/lib;-L/usr/local/Cellar/glib/2.58.1/lib;-L/usr/local/opt/gettext/lib;-L/usr/local/Cellar/libsigc++/2.10.0/lib;-lxml++-2.6;-lxml2;-lglibmm-2.4;-lgobject-2.0;-lglib-2.0;-lintl;-Wl,-framework;-Wl,CoreFoundation;-lsigc-2.0
+LibXML++_PKGCONF_LDFLAGS_OTHER:INTERNAL=-Wl,-framework;-Wl,CoreFoundation
+LibXML++_PKGCONF_LIBDIR:INTERNAL=/usr/local/Cellar/libxml++/2.40.1/lib
+LibXML++_PKGCONF_LIBRARIES:INTERNAL=xml++-2.6;xml2;glibmm-2.4;gobject-2.0;glib-2.0;intl;sigc-2.0
+LibXML++_PKGCONF_LIBRARY_DIRS:INTERNAL=/usr/local/Cellar/libxml++/2.40.1/lib;/usr/local/Cellar/glibmm/2.56.0_1/lib;/usr/local/Cellar/glib/2.58.1/lib;/usr/local/opt/gettext/lib;/usr/local/Cellar/libsigc++/2.10.0/lib
+LibXML++_PKGCONF_LIBS:INTERNAL=
+LibXML++_PKGCONF_LIBS_L:INTERNAL=
+LibXML++_PKGCONF_LIBS_OTHER:INTERNAL=
+LibXML++_PKGCONF_LIBS_PATHS:INTERNAL=
+LibXML++_PKGCONF_PREFIX:INTERNAL=/usr/local/Cellar/libxml++/2.40.1
+LibXML++_PKGCONF_STATIC_CFLAGS:INTERNAL=-I/usr/local/Cellar/libxml++/2.40.1/include/libxml++-2.6;-I/usr/local/Cellar/libxml++/2.40.1/lib/libxml++-2.6/include;-I/usr/local/Cellar/glibmm/2.56.0_1/include/glibmm-2.4;-I/usr/local/Cellar/glibmm/2.56.0_1/lib/glibmm-2.4/include;-I/usr/local/Cellar/glib/2.58.1/include/glib-2.0;-I/usr/local/Cellar/glib/2.58.1/lib/glib-2.0/include;-I/usr/local/opt/gettext/include;-I/usr/local/Cellar/pcre/8.42/include;-I/usr/local/Cellar/libsigc++/2.10.0/include/sigc++-2.0;-I/usr/local/Cellar/libsigc++/2.10.0/lib/sigc++-2.0/include;-I/usr/include/libxml2
+LibXML++_PKGCONF_STATIC_CFLAGS_I:INTERNAL=
+LibXML++_PKGCONF_STATIC_CFLAGS_OTHER:INTERNAL=
+LibXML++_PKGCONF_STATIC_INCLUDE_DIRS:INTERNAL=/usr/local/Cellar/libxml++/2.40.1/include/libxml++-2.6;/usr/local/Cellar/libxml++/2.40.1/lib/libxml++-2.6/include;/usr/local/Cellar/glibmm/2.56.0_1/include/glibmm-2.4;/usr/local/Cellar/glibmm/2.56.0_1/lib/glibmm-2.4/include;/usr/local/Cellar/glib/2.58.1/include/glib-2.0;/usr/local/Cellar/glib/2.58.1/lib/glib-2.0/include;/usr/local/opt/gettext/include;/usr/local/Cellar/pcre/8.42/include;/usr/local/Cellar/libsigc++/2.10.0/include/sigc++-2.0;/usr/local/Cellar/libsigc++/2.10.0/lib/sigc++-2.0/include;/usr/include/libxml2
+LibXML++_PKGCONF_STATIC_LDFLAGS:INTERNAL=-L/usr/local/Cellar/libxml++/2.40.1/lib;-L/usr/local/Cellar/glibmm/2.56.0_1/lib;-L/usr/local/Cellar/glib/2.58.1/lib;-L/usr/local/Cellar/libffi/3.2.1/lib;-L/usr/local/Cellar/glib/2.58.1/lib;-L/usr/local/opt/gettext/lib;-L/usr/local/Cellar/pcre/8.42/lib;-L/usr/local/Cellar/libsigc++/2.10.0/lib;-lxml++-2.6;-lxml2;-lz;-lpthread;-licucore;-lm;-lglibmm-2.4;-lgobject-2.0;-lffi;-lglib-2.0;-lintl;-Wl,-framework;-Wl,CoreFoundation;-lpcre;-lintl;-Wl,-framework;-Wl,CoreFoundation;-liconv;-Wl,-framework,Carbon;-Wl,-framework,Foundation;-Wl,-framework,AppKit;-lpcre;-D_THREAD_SAFE;-pthread;-lsigc-2.0
+LibXML++_PKGCONF_STATIC_LDFLAGS_OTHER:INTERNAL=-Wl,-framework;-Wl,CoreFoundation;-Wl,-framework,Carbon;-Wl,-framework,Foundation;-Wl,-framework,AppKit;-D_THREAD_SAFE;-pthread
+LibXML++_PKGCONF_STATIC_LIBDIR:INTERNAL=
+LibXML++_PKGCONF_STATIC_LIBRARIES:INTERNAL=xml++-2.6;xml2;z;pthread;icucore;m;glibmm-2.4;gobject-2.0;ffi;glib-2.0;intl;pcre;intl;iconv;pcre;sigc-2.0
+LibXML++_PKGCONF_STATIC_LIBRARY_DIRS:INTERNAL=/usr/local/Cellar/libxml++/2.40.1/lib;/usr/local/Cellar/glibmm/2.56.0_1/lib;/usr/local/Cellar/glib/2.58.1/lib;/usr/local/Cellar/libffi/3.2.1/lib;/usr/local/Cellar/glib/2.58.1/lib;/usr/local/opt/gettext/lib;/usr/local/Cellar/pcre/8.42/lib;/usr/local/Cellar/libsigc++/2.10.0/lib
+LibXML++_PKGCONF_STATIC_LIBS:INTERNAL=
+LibXML++_PKGCONF_STATIC_LIBS_L:INTERNAL=
+LibXML++_PKGCONF_STATIC_LIBS_OTHER:INTERNAL=
+LibXML++_PKGCONF_STATIC_LIBS_PATHS:INTERNAL=
+LibXML++_PKGCONF_VERSION:INTERNAL=2.40.1
+LibXML++_PKGCONF_libxml++-2.6_INCLUDEDIR:INTERNAL=
+LibXML++_PKGCONF_libxml++-2.6_LIBDIR:INTERNAL=
+LibXML++_PKGCONF_libxml++-2.6_PREFIX:INTERNAL=
+LibXML++_PKGCONF_libxml++-2.6_VERSION:INTERNAL=
+//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
+PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: ProcessorCount_cmd_sysctl
 ProcessorCount_cmd_sysctl-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SigC++Config_INCLUDE_DIR
+SigC++Config_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SigC++_INCLUDE_DIR
+SigC++_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SigC++_LIBRARY
+SigC++_LIBRARY-ADVANCED:INTERNAL=1
+SigC++_PKGCONF_CFLAGS:INTERNAL=-I/usr/local/Cellar/libsigc++/2.10.0/include/sigc++-2.0;-I/usr/local/Cellar/libsigc++/2.10.0/lib/sigc++-2.0/include
+SigC++_PKGCONF_CFLAGS_I:INTERNAL=
+SigC++_PKGCONF_CFLAGS_OTHER:INTERNAL=
+SigC++_PKGCONF_FOUND:INTERNAL=1
+SigC++_PKGCONF_INCLUDEDIR:INTERNAL=/usr/local/Cellar/libsigc++/2.10.0/include
+SigC++_PKGCONF_INCLUDE_DIRS:INTERNAL=/usr/local/Cellar/libsigc++/2.10.0/include/sigc++-2.0;/usr/local/Cellar/libsigc++/2.10.0/lib/sigc++-2.0/include
+SigC++_PKGCONF_LDFLAGS:INTERNAL=-L/usr/local/Cellar/libsigc++/2.10.0/lib;-lsigc-2.0
+SigC++_PKGCONF_LDFLAGS_OTHER:INTERNAL=
+SigC++_PKGCONF_LIBDIR:INTERNAL=/usr/local/Cellar/libsigc++/2.10.0/lib
+SigC++_PKGCONF_LIBRARIES:INTERNAL=sigc-2.0
+SigC++_PKGCONF_LIBRARY_DIRS:INTERNAL=/usr/local/Cellar/libsigc++/2.10.0/lib
+SigC++_PKGCONF_LIBS:INTERNAL=
+SigC++_PKGCONF_LIBS_L:INTERNAL=
+SigC++_PKGCONF_LIBS_OTHER:INTERNAL=
+SigC++_PKGCONF_LIBS_PATHS:INTERNAL=
+SigC++_PKGCONF_PREFIX:INTERNAL=/usr/local/Cellar/libsigc++/2.10.0
+SigC++_PKGCONF_STATIC_CFLAGS:INTERNAL=-I/usr/local/Cellar/libsigc++/2.10.0/include/sigc++-2.0;-I/usr/local/Cellar/libsigc++/2.10.0/lib/sigc++-2.0/include
+SigC++_PKGCONF_STATIC_CFLAGS_I:INTERNAL=
+SigC++_PKGCONF_STATIC_CFLAGS_OTHER:INTERNAL=
+SigC++_PKGCONF_STATIC_INCLUDE_DIRS:INTERNAL=/usr/local/Cellar/libsigc++/2.10.0/include/sigc++-2.0;/usr/local/Cellar/libsigc++/2.10.0/lib/sigc++-2.0/include
+SigC++_PKGCONF_STATIC_LDFLAGS:INTERNAL=-L/usr/local/Cellar/libsigc++/2.10.0/lib;-lsigc-2.0
+SigC++_PKGCONF_STATIC_LDFLAGS_OTHER:INTERNAL=
+SigC++_PKGCONF_STATIC_LIBDIR:INTERNAL=
+SigC++_PKGCONF_STATIC_LIBRARIES:INTERNAL=sigc-2.0
+SigC++_PKGCONF_STATIC_LIBRARY_DIRS:INTERNAL=/usr/local/Cellar/libsigc++/2.10.0/lib
+SigC++_PKGCONF_STATIC_LIBS:INTERNAL=
+SigC++_PKGCONF_STATIC_LIBS_L:INTERNAL=
+SigC++_PKGCONF_STATIC_LIBS_OTHER:INTERNAL=
+SigC++_PKGCONF_STATIC_LIBS_PATHS:INTERNAL=
+SigC++_PKGCONF_VERSION:INTERNAL=2.10.0
+SigC++_PKGCONF_sigc++-2.0_INCLUDEDIR:INTERNAL=
+SigC++_PKGCONF_sigc++-2.0_LIBDIR:INTERNAL=
+SigC++_PKGCONF_sigc++-2.0_PREFIX:INTERNAL=
+SigC++_PKGCONF_sigc++-2.0_VERSION:INTERNAL=
+_LIBXML2_CFLAGS:INTERNAL=-I/usr/include/libxml2
+_LIBXML2_CFLAGS_I:INTERNAL=
+_LIBXML2_CFLAGS_OTHER:INTERNAL=
+_LIBXML2_FOUND:INTERNAL=1
+_LIBXML2_INCLUDEDIR:INTERNAL=/usr/include
+_LIBXML2_INCLUDE_DIRS:INTERNAL=/usr/include/libxml2
+_LIBXML2_LDFLAGS:INTERNAL=-lxml2
+_LIBXML2_LDFLAGS_OTHER:INTERNAL=
+_LIBXML2_LIBDIR:INTERNAL=/usr/lib
+_LIBXML2_LIBRARIES:INTERNAL=xml2
+_LIBXML2_LIBRARY_DIRS:INTERNAL=
+_LIBXML2_LIBS:INTERNAL=
+_LIBXML2_LIBS_L:INTERNAL=
+_LIBXML2_LIBS_OTHER:INTERNAL=
+_LIBXML2_LIBS_PATHS:INTERNAL=
+_LIBXML2_PREFIX:INTERNAL=/usr
+_LIBXML2_STATIC_CFLAGS:INTERNAL=-I/usr/include/libxml2
+_LIBXML2_STATIC_CFLAGS_I:INTERNAL=
+_LIBXML2_STATIC_CFLAGS_OTHER:INTERNAL=
+_LIBXML2_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/libxml2
+_LIBXML2_STATIC_LDFLAGS:INTERNAL=-lxml2;-lz;-lpthread;-licucore;-lm
+_LIBXML2_STATIC_LDFLAGS_OTHER:INTERNAL=
+_LIBXML2_STATIC_LIBDIR:INTERNAL=
+_LIBXML2_STATIC_LIBRARIES:INTERNAL=xml2;z;pthread;icucore;m
+_LIBXML2_STATIC_LIBRARY_DIRS:INTERNAL=
+_LIBXML2_STATIC_LIBS:INTERNAL=
+_LIBXML2_STATIC_LIBS_L:INTERNAL=
+_LIBXML2_STATIC_LIBS_OTHER:INTERNAL=
+_LIBXML2_STATIC_LIBS_PATHS:INTERNAL=
+_LIBXML2_VERSION:INTERNAL=2.9.4
+_LIBXML2_libxml-2.0_INCLUDEDIR:INTERNAL=
+_LIBXML2_libxml-2.0_LIBDIR:INTERNAL=
+_LIBXML2_libxml-2.0_PREFIX:INTERNAL=
+_LIBXML2_libxml-2.0_VERSION:INTERNAL=
+__pkg_config_arguments_Glib_PKGCONF:INTERNAL=glib-2.0
+__pkg_config_arguments_Glibmm_PKGCONF:INTERNAL=glibmm-2.4
+__pkg_config_arguments_LibXML++_PKGCONF:INTERNAL=libxml++-2.6
+__pkg_config_arguments_SigC++_PKGCONF:INTERNAL=sigc++-2.0
+__pkg_config_arguments__LIBXML2:INTERNAL=libxml-2.0
+__pkg_config_checked_Glib_PKGCONF:INTERNAL=1
+__pkg_config_checked_Glibmm_PKGCONF:INTERNAL=1
+__pkg_config_checked_LibXML++_PKGCONF:INTERNAL=1
+__pkg_config_checked_SigC++_PKGCONF:INTERNAL=1
+__pkg_config_checked__LIBXML2:INTERNAL=1
+prefix_result:INTERNAL=/usr/local/Cellar/libxml++/2.40.1/lib
 

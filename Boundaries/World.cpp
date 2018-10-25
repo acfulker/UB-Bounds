@@ -14,11 +14,16 @@ World::~World(){}
  * @param a
  * @return prioritized list of all bounds within DISTANCE_OF_IRRELEVANCE;
  */
-std::priority_queue<Box::Box> World::Near(Agent a){
-    std::priority_queue<Box::Box> near = new Std::priority_queue;
+std::queue<Box::Box> World::Near(Agent a){
+    double d;
+    std::queue<Box::Box> *near = new std::queue;
     for(Box::Box i : boxes){
-        if(i.isNear(a)){
-            near.push(i);
+        d=i.getDist(a);
+        if(d==0){//in no fly zone
+        
+        }
+        else if(d<=range){//Within range of zone
+            near->push(i);
         }
     }
 }

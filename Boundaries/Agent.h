@@ -5,7 +5,7 @@
 #ifndef BOUNDARIES_AGENT_H
 #define BOUNDARIES_AGENT_H
 
-#include "QGeoCoordinate.h"
+#include "Coord.h"
 #include "Box.h"
 #include "World.h"
 
@@ -13,12 +13,12 @@ class Agent {
 private:
 
 public:
-    QGeoCoordinate loc;
+    Coord loc;
     double lat, lon;
     
     Agent();
     ~Agent();
-    Agent(QGeoCoordinate coord) : loc(coord) {};
+    Agent(Coord coord) : loc(coord) {};
     
     
     

@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/usr/local/include/libxml++-2.6 -I/usr/local/lib/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/local/include/glibmm-2.4 -I/usr/local/lib/glibmm-2.4/include -I/usr/local/include/glib-2.0 -I/usr/local/lib/glib-2.0/include -I/usr/local/include/sigc++-2.0 -I/usr/local/lib/sigc++-2.0/include 
 

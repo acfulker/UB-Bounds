@@ -177,32 +177,32 @@ Box.cpp.s:
 	$(MAKE) -f CMakeFiles/Boundaries.dir/build.make CMakeFiles/Boundaries.dir/Box.cpp.s
 .PHONY : Box.cpp.s
 
-Users/andrew/CLionProjects/UB-Bounds/World.o: Users/andrew/CLionProjects/UB-Bounds/World.cpp.o
+Coord.o: Coord.cpp.o
 
-.PHONY : Users/andrew/CLionProjects/UB-Bounds/World.o
+.PHONY : Coord.o
 
 # target to build an object file
-Users/andrew/CLionProjects/UB-Bounds/World.cpp.o:
-	$(MAKE) -f CMakeFiles/Boundaries.dir/build.make CMakeFiles/Boundaries.dir/Users/andrew/CLionProjects/UB-Bounds/World.cpp.o
-.PHONY : Users/andrew/CLionProjects/UB-Bounds/World.cpp.o
+Coord.cpp.o:
+	$(MAKE) -f CMakeFiles/Boundaries.dir/build.make CMakeFiles/Boundaries.dir/Coord.cpp.o
+.PHONY : Coord.cpp.o
 
-Users/andrew/CLionProjects/UB-Bounds/World.i: Users/andrew/CLionProjects/UB-Bounds/World.cpp.i
+Coord.i: Coord.cpp.i
 
-.PHONY : Users/andrew/CLionProjects/UB-Bounds/World.i
+.PHONY : Coord.i
 
 # target to preprocess a source file
-Users/andrew/CLionProjects/UB-Bounds/World.cpp.i:
-	$(MAKE) -f CMakeFiles/Boundaries.dir/build.make CMakeFiles/Boundaries.dir/Users/andrew/CLionProjects/UB-Bounds/World.cpp.i
-.PHONY : Users/andrew/CLionProjects/UB-Bounds/World.cpp.i
+Coord.cpp.i:
+	$(MAKE) -f CMakeFiles/Boundaries.dir/build.make CMakeFiles/Boundaries.dir/Coord.cpp.i
+.PHONY : Coord.cpp.i
 
-Users/andrew/CLionProjects/UB-Bounds/World.s: Users/andrew/CLionProjects/UB-Bounds/World.cpp.s
+Coord.s: Coord.cpp.s
 
-.PHONY : Users/andrew/CLionProjects/UB-Bounds/World.s
+.PHONY : Coord.s
 
 # target to generate assembly for a file
-Users/andrew/CLionProjects/UB-Bounds/World.cpp.s:
-	$(MAKE) -f CMakeFiles/Boundaries.dir/build.make CMakeFiles/Boundaries.dir/Users/andrew/CLionProjects/UB-Bounds/World.cpp.s
-.PHONY : Users/andrew/CLionProjects/UB-Bounds/World.cpp.s
+Coord.cpp.s:
+	$(MAKE) -f CMakeFiles/Boundaries.dir/build.make CMakeFiles/Boundaries.dir/Coord.cpp.s
+.PHONY : Coord.cpp.s
 
 World.o: World.cpp.o
 
@@ -273,9 +273,9 @@ help:
 	@echo "... Box.o"
 	@echo "... Box.i"
 	@echo "... Box.s"
-	@echo "... Users/andrew/CLionProjects/UB-Bounds/World.o"
-	@echo "... Users/andrew/CLionProjects/UB-Bounds/World.i"
-	@echo "... Users/andrew/CLionProjects/UB-Bounds/World.s"
+	@echo "... Coord.o"
+	@echo "... Coord.i"
+	@echo "... Coord.s"
 	@echo "... World.o"
 	@echo "... World.i"
 	@echo "... World.s"

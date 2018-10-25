@@ -5,7 +5,7 @@
 		<Option title="Boundaries"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake\;CMake Files\cmake\Modules\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug"/>
@@ -44,6 +44,15 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/usr/local/include/libxml++-2.6"/>
+					<Add directory="/usr/local/lib/libxml++-2.6/include"/>
+					<Add directory="/usr/include/libxml2"/>
+					<Add directory="/usr/local/include/glibmm-2.4"/>
+					<Add directory="/usr/local/lib/glibmm-2.4/include"/>
+					<Add directory="/usr/local/include/glib-2.0"/>
+					<Add directory="/usr/local/lib/glib-2.0/include"/>
+					<Add directory="/usr/local/include/sigc++-2.0"/>
+					<Add directory="/usr/local/lib/sigc++-2.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -64,6 +73,15 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/usr/local/include/libxml++-2.6"/>
+					<Add directory="/usr/local/lib/libxml++-2.6/include"/>
+					<Add directory="/usr/include/libxml2"/>
+					<Add directory="/usr/local/include/glibmm-2.4"/>
+					<Add directory="/usr/local/lib/glibmm-2.4/include"/>
+					<Add directory="/usr/local/include/glib-2.0"/>
+					<Add directory="/usr/local/lib/glib-2.0/include"/>
+					<Add directory="/usr/local/include/sigc++-2.0"/>
+					<Add directory="/usr/local/lib/sigc++-2.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -90,6 +108,12 @@
 		<Unit filename="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/Box.h">
 			<Option target="Boundaries"/>
 		</Unit>
+		<Unit filename="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/Coord.cpp">
+			<Option target="Boundaries"/>
+		</Unit>
+		<Unit filename="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/Coord.h">
+			<Option target="Boundaries"/>
+		</Unit>
 		<Unit filename="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/World.cpp">
 			<Option target="Boundaries"/>
 		</Unit>
@@ -99,14 +123,26 @@
 		<Unit filename="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/main.cpp">
 			<Option target="Boundaries"/>
 		</Unit>
-		<Unit filename="/Users/andrew/CLionProjects/UB-Bounds/World.cpp">
-			<Option target="Boundaries"/>
-		</Unit>
-		<Unit filename="/Users/andrew/CLionProjects/UB-Bounds/World.h">
-			<Option target="Boundaries"/>
-		</Unit>
 		<Unit filename="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake/Modules/FindGlib.cmake">
+			<Option virtualFolder="CMake Files\cmake\Modules\"/>
+		</Unit>
+		<Unit filename="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake/Modules/FindGlibmm.cmake">
+			<Option virtualFolder="CMake Files\cmake\Modules\"/>
+		</Unit>
+		<Unit filename="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake/Modules/FindLibXML++.cmake">
+			<Option virtualFolder="CMake Files\cmake\Modules\"/>
+		</Unit>
+		<Unit filename="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake/Modules/FindLibXML2.cmake">
+			<Option virtualFolder="CMake Files\cmake\Modules\"/>
+		</Unit>
+		<Unit filename="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake/Modules/FindSigC++.cmake">
+			<Option virtualFolder="CMake Files\cmake\Modules\"/>
+		</Unit>
+		<Unit filename="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake/Modules/LibFindMacros.cmake">
+			<Option virtualFolder="CMake Files\cmake\Modules\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

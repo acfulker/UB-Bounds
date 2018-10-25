@@ -10,6 +10,11 @@ Call Stack (most recent call first):
   CMakeLists.txt:2 (project)
 
 
+-- Found libxml2: /usr/lib/libxml2.dylib
+-- Found Glib 
+-- Found SigC++ 
+-- Found Glibmm 
+-- Found LibXML++ 
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug
