@@ -8,45 +8,45 @@
 		<Option virtualFolders="CMake Files\;CMake Files\cmake\;CMake Files\cmake\Modules\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug"/>
+				<Option working_dir="/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug"/>
+				<Option working_dir="/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug"/>
+				<Option working_dir="/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Boundaries">
-				<Option output="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Boundaries" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug"/>
+				<Option output="/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Boundaries" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/usr/local/include/libxml++-2.6"/>
 					<Add directory="/usr/local/lib/libxml++-2.6/include"/>
-					<Add directory="/usr/include/libxml2"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/libxml2"/>
 					<Add directory="/usr/local/include/glibmm-2.4"/>
 					<Add directory="/usr/local/lib/glibmm-2.4/include"/>
 					<Add directory="/usr/local/include/glib-2.0"/>
@@ -54,28 +54,28 @@
 					<Add directory="/usr/local/include/sigc++-2.0"/>
 					<Add directory="/usr/local/lib/sigc++-2.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 Boundaries"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 Boundaries"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Boundaries/fast">
-				<Option output="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Boundaries" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug"/>
+				<Option output="/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Boundaries" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/usr/local/include/libxml++-2.6"/>
 					<Add directory="/usr/local/lib/libxml++-2.6/include"/>
-					<Add directory="/usr/include/libxml2"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/libxml2"/>
 					<Add directory="/usr/local/include/glibmm-2.4"/>
 					<Add directory="/usr/local/lib/glibmm-2.4/include"/>
 					<Add directory="/usr/local/include/glib-2.0"/>
@@ -83,65 +83,65 @@
 					<Add directory="/usr/local/include/sigc++-2.0"/>
 					<Add directory="/usr/local/lib/sigc++-2.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 Boundaries/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 Boundaries/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/Agent.cpp">
+		<Unit filename="/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/Agent.cpp">
 			<Option target="Boundaries"/>
 		</Unit>
-		<Unit filename="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/Agent.h">
+		<Unit filename="/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/Agent.h">
 			<Option target="Boundaries"/>
 		</Unit>
-		<Unit filename="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/Box.cpp">
+		<Unit filename="/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/Box.cpp">
 			<Option target="Boundaries"/>
 		</Unit>
-		<Unit filename="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/Box.h">
+		<Unit filename="/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/Box.h">
 			<Option target="Boundaries"/>
 		</Unit>
-		<Unit filename="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/Coord.cpp">
+		<Unit filename="/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/Coord.cpp">
 			<Option target="Boundaries"/>
 		</Unit>
-		<Unit filename="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/Coord.h">
+		<Unit filename="/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/Coord.h">
 			<Option target="Boundaries"/>
 		</Unit>
-		<Unit filename="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/World.cpp">
+		<Unit filename="/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/World.cpp">
 			<Option target="Boundaries"/>
 		</Unit>
-		<Unit filename="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/World.h">
+		<Unit filename="/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/World.h">
 			<Option target="Boundaries"/>
 		</Unit>
-		<Unit filename="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/main.cpp">
+		<Unit filename="/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/main.cpp">
 			<Option target="Boundaries"/>
 		</Unit>
-		<Unit filename="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/CMakeLists.txt">
+		<Unit filename="/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake/Modules/FindGlib.cmake">
+		<Unit filename="/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake/Modules/FindGlib.cmake">
 			<Option virtualFolder="CMake Files\cmake\Modules\"/>
 		</Unit>
-		<Unit filename="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake/Modules/FindGlibmm.cmake">
+		<Unit filename="/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake/Modules/FindGlibmm.cmake">
 			<Option virtualFolder="CMake Files\cmake\Modules\"/>
 		</Unit>
-		<Unit filename="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake/Modules/FindLibXML++.cmake">
+		<Unit filename="/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake/Modules/FindLibXML++.cmake">
 			<Option virtualFolder="CMake Files\cmake\Modules\"/>
 		</Unit>
-		<Unit filename="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake/Modules/FindLibXML2.cmake">
+		<Unit filename="/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake/Modules/FindLibXML2.cmake">
 			<Option virtualFolder="CMake Files\cmake\Modules\"/>
 		</Unit>
-		<Unit filename="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake/Modules/FindSigC++.cmake">
+		<Unit filename="/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake/Modules/FindSigC++.cmake">
 			<Option virtualFolder="CMake Files\cmake\Modules\"/>
 		</Unit>
-		<Unit filename="/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake/Modules/LibFindMacros.cmake">
+		<Unit filename="/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake/Modules/LibFindMacros.cmake">
 			<Option virtualFolder="CMake Files\cmake\Modules\"/>
 		</Unit>
 	</Project>

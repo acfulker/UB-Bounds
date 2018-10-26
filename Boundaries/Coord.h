@@ -11,9 +11,10 @@ class Coord {
 private:
 
 public:
-    double lat, lon;
+    double latitude, longitude;
     Coord(){};
-    Coord(double lat, double lon) : lat(lat), lon(lon) {};
+    Coord(double lat, double lon) : latitude(lat), longitude(lon) {};
+
     
     double distanceTo(Coord &other);
     

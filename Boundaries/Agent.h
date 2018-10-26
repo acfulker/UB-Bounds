@@ -6,8 +6,7 @@
 #define BOUNDARIES_AGENT_H
 
 #include "Coord.h"
-#include "Box.h"
-#include "World.h"
+
 
 class Agent {
 private:
@@ -17,10 +16,7 @@ public:
     double lat, lon;
     
     Agent();
-    ~Agent();
-    Agent(Coord coord) : loc(coord) {};
-    
-    
+    explicit Agent(Coord &coord) : loc(coord) {};
     
 };
 

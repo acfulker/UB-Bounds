@@ -1,20 +1,14 @@
-/Applications/CLion.app/Contents/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/andrew/CLionProjects/UB-Bounds/Boundaries
-CMake Warning at /Applications/CLion.app/Contents/bin/cmake/share/cmake-3.10/Modules/Platform/Darwin-Initialize.cmake:121 (message):
-  Ignoring CMAKE_OSX_SYSROOT value:
-
-   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk
-
-  because the directory does not exist.
-Call Stack (most recent call first):
-  /Applications/CLion.app/Contents/bin/cmake/share/cmake-3.10/Modules/CMakeSystemSpecificInitialize.cmake:8 (include)
-  CMakeLists.txt:2 (project)
-
-
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/annasholk/CLionProjects/UB-Bounds/Boundaries
+-- Could NOT find PkgConfig (missing: PKG_CONFIG_EXECUTABLE) 
 -- Found libxml2: /usr/lib/libxml2.dylib
+-- Could NOT find PkgConfig (missing: PKG_CONFIG_EXECUTABLE) 
 -- Found Glib 
+-- Could NOT find PkgConfig (missing: PKG_CONFIG_EXECUTABLE) 
 -- Found SigC++ 
+-- Could NOT find PkgConfig (missing: PKG_CONFIG_EXECUTABLE) 
 -- Found Glibmm 
+-- Could NOT find PkgConfig (missing: PKG_CONFIG_EXECUTABLE) 
 -- Found LibXML++ 
 -- Configuring done
 -- Generating done
--- Build files have been written to: /Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug
+-- Build files have been written to: /Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug

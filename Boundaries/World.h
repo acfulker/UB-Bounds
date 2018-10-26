@@ -9,19 +9,19 @@
 #include <queue>
 #include "Box.h"
 #include "Agent.h"
-#include "Coord.h"
 
 class World {
 private:
     list boxes;
 public:
+    double range;
     World();
     World(list boxes);
     World(const World &other);
     ~World();
     
-    std::queue<Box::Box> Near(Agent a);
-    bool add(Box::Box b);
+    std::queue<Box> Near(Agent &a);
+    bool add(Box &b);
     
 };
 

@@ -5,14 +5,13 @@
 #include "Agent.h"
 
 Agent::Agent(){
-    loc = Coord::Coord();
+    auto loc = Coord();
     lat = 0;
     lon = 0;
 }
-
-Agent::Agent(Coord coord) {
-    lat = coord.latitude();
-    lon = coord.longitude();
+Agent::Agent(Coord &coord) {
+    lat = coord.latitude;
+    lon = coord.longitude;
 }
 
 Agent::~Agent() {

@@ -7,13 +7,13 @@
 
 #define DISTANCE_OF_IRRELEVANCE = 50;
 #include "Coord.h"
+#include "Agent.h"
 
 class Box {
 private:
     //These should be the same data
     double north, south, east, west;//Boundaries in latitude and longitude
-    Coord nw, ne, se, sw, n, s, e ,w;//Boundary corners as QGC
-    double borderDistance;
+    Coord nw, ne, se, sw;//Boundary corners as QGC
     
 public:
     Box();
@@ -21,8 +21,8 @@ public:
     Box(double north, double south, double east, double west);
     Box(const Box &other);
     ~Box();
-    
-    double getDist(Agent a);//Returns distance to box
+
+    double getDist(Agent& a);//Returns distance to box
     
     double getN();
     double getS();
