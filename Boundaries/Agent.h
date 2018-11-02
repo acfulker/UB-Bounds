@@ -16,7 +16,7 @@ public:
     double lat, lon;
     
     Agent();
-    explicit Agent(Coord &coord) : loc(coord) {};
+    Agent(Coord &coord);
     
 };
 

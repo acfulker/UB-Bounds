@@ -14,7 +14,5 @@ Agent::Agent(Coord &coord) {
     lon = coord.longitude;
 }
 
-Agent::~Agent() {
-    delete loc;
-}
+
 

@@ -1,17 +1,17 @@
-<noflyzones>
-    <zone name="Alumni Arena">
-        <point lat="57.2", long="48.23" />
-        <point lat="57.2", long="48.23" />
-        <point lat="57.2", long="48.23" />
-        <point lat="57.2", long="48.23" />
-    </zone>
-    
-    <zone name="Stadium">
-        <point lat="57.2", long="48.23" />
-        <point lat="57.2", long="48.23" />
-        <point lat="57.2", long="48.23" />
-        <point lat="57.2", long="48.23" />
-    </zone>    
-
-</noflyzones>
+<controlled_region>
+    <sector name="1">
+        <zone name="Alumni Arena">
+            <point lat="43.000868" long="-78.780428" />
+            <point lat="42.999495" long="-78.780428" />
+            <point lat="42.999495" long="-78.782037" />
+            <point lat="43.000868" long="-78.782037" />
+        </zone>
+        <zone name="Stadium">
+            <point lat="43.000201" long="-78.776318" />
+            <point lat="42.997965" long="-78.776318" />
+            <point lat="42.997965" long="-78.778636" />
+            <point lat="43.000201" long="-78.778636" />
+        </zone>
+    </sector>
+</controlled_region>
 
