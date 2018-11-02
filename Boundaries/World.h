@@ -12,11 +12,11 @@
 
 class World {
 private:
-    list boxes;
+//    list boxes;
 public:
     double range;
     World();
-    World(list boxes);
+    //World(list boxes);
     World(const World &other);
     ~World();
     
