@@ -24,6 +24,10 @@ Zone::Zone(float *lat, float *lon, int points) : polyCorners(points) {
     }
 }
 
+Zone::~Zone() {
+    delete [] lats, lons, constant, multiple;
+}
+
 bool Zone::inZone(double lat, double lon) {
     int   i, j=polyCorners-1 ;
     bool  oddNodes=false      ;

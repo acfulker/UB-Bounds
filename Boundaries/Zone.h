@@ -15,7 +15,7 @@ public:
     
     Zone(float *lat, float *lon, int points);
     
-    ~Zone(){};
+    ~Zone();
     
     bool inZone(double lat, double lon);
 

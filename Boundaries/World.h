@@ -7,7 +7,7 @@
 
 
 #include <queue>
-#include "Box.h"
+#include "Zone.h"
 #include "Agent.h"
 
 class World {
@@ -15,13 +15,11 @@ private:
 //    list boxes;
 public:
     double range;
-    World();
-    //World(list boxes);
+    World(std::vector<std::vector<Zone>> world);
     World(const World &other);
     ~World();
     
-    std::queue<Box> Near(Agent &a);
-    bool add(Box &b);
+    std::queue<Zone> Near(Agent &a);//needs work
     
 };
 
