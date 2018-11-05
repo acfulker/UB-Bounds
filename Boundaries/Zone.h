@@ -10,7 +10,7 @@ class Zone {
 private:
 
 public:
-    float lats[], lons[], constant[], multiple[];
+    float *lats, *lons, *constant, *multiple;
     int polyCorners;
     
     Zone(float *lat, float *lon, int points);

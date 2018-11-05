@@ -4,7 +4,11 @@
 
 #include "Zone.h"
 
-Zone::Zone(float *lat, float *lon, int points) : lats(lat), lons(lon), polyCorners(points) {
+Zone::Zone(float *lat, float *lon, int points) : polyCorners(points) {
+    lats = new float[polyCorners];
+    lons = new float[polyCorners];
+    constant = new float[polyCorners];
+    multiple = new float[polyCorners];
     int   i, j=polyCorners-1 ;
     
     for(i=0; i<polyCorners; i++) {
@@ -25,8 +29,8 @@ bool Zone::inZone(double lat, double lon) {
     bool  oddNodes=false      ;
     
     for (i=0; i<polyCorners; i++) {
-        if ((lats[i]< lat && lats[j]>=lat
-             ||   lats[j]< lat && lats[i]>=lat)) {
+        if (((lats[i]< lat && lats[j]>=lat)
+             ||   (lats[j]< lat && lats[i]>=lat))) {
             oddNodes^=(lat*multiple[i]+constant[i]<lon); }
         j=i; }
     
