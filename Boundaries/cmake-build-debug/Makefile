@@ -691,6 +691,33 @@ World.cpp.s:
 	$(MAKE) -f CMakeFiles/Boundaries.dir/build.make CMakeFiles/Boundaries.dir/World.cpp.s
 .PHONY : World.cpp.s
 
+Zone.o: Zone.cpp.o
+
+.PHONY : Zone.o
+
+# target to build an object file
+Zone.cpp.o:
+	$(MAKE) -f CMakeFiles/Boundaries.dir/build.make CMakeFiles/Boundaries.dir/Zone.cpp.o
+.PHONY : Zone.cpp.o
+
+Zone.i: Zone.cpp.i
+
+.PHONY : Zone.i
+
+# target to preprocess a source file
+Zone.cpp.i:
+	$(MAKE) -f CMakeFiles/Boundaries.dir/build.make CMakeFiles/Boundaries.dir/Zone.cpp.i
+.PHONY : Zone.cpp.i
+
+Zone.s: Zone.cpp.s
+
+.PHONY : Zone.s
+
+# target to generate assembly for a file
+Zone.cpp.s:
+	$(MAKE) -f CMakeFiles/Boundaries.dir/build.make CMakeFiles/Boundaries.dir/Zone.cpp.s
+.PHONY : Zone.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -744,6 +771,33 @@ tinyxml2.s: tinyxml2.cpp.s
 tinyxml2.cpp.s:
 	$(MAKE) -f CMakeFiles/tinyxml2.dir/build.make CMakeFiles/tinyxml2.dir/tinyxml2.cpp.s
 .PHONY : tinyxml2.cpp.s
+
+xmltest.o: xmltest.cpp.o
+
+.PHONY : xmltest.o
+
+# target to build an object file
+xmltest.cpp.o:
+	$(MAKE) -f CMakeFiles/xmltest.dir/build.make CMakeFiles/xmltest.dir/xmltest.cpp.o
+.PHONY : xmltest.cpp.o
+
+xmltest.i: xmltest.cpp.i
+
+.PHONY : xmltest.i
+
+# target to preprocess a source file
+xmltest.cpp.i:
+	$(MAKE) -f CMakeFiles/xmltest.dir/build.make CMakeFiles/xmltest.dir/xmltest.cpp.i
+.PHONY : xmltest.cpp.i
+
+xmltest.s: xmltest.cpp.s
+
+.PHONY : xmltest.s
+
+# target to generate assembly for a file
+xmltest.cpp.s:
+	$(MAKE) -f CMakeFiles/xmltest.dir/build.make CMakeFiles/xmltest.dir/xmltest.cpp.s
+.PHONY : xmltest.cpp.s
 
 # Help Target
 help:
@@ -802,12 +856,18 @@ help:
 	@echo "... World.o"
 	@echo "... World.i"
 	@echo "... World.s"
+	@echo "... Zone.o"
+	@echo "... Zone.i"
+	@echo "... Zone.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
 	@echo "... tinyxml2.o"
 	@echo "... tinyxml2.i"
 	@echo "... tinyxml2.s"
+	@echo "... xmltest.o"
+	@echo "... xmltest.i"
+	@echo "... xmltest.s"
 .PHONY : help
 
 

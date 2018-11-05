@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/andrew/CLionProjects/UB-Bounds/Boundaries/Box.cpp" "/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/CMakeFiles/Boundaries.dir/Box.cpp.o"
   "/Users/andrew/CLionProjects/UB-Bounds/Boundaries/Coord.cpp" "/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/CMakeFiles/Boundaries.dir/Coord.cpp.o"
   "/Users/andrew/CLionProjects/UB-Bounds/Boundaries/World.cpp" "/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/CMakeFiles/Boundaries.dir/World.cpp.o"
+  "/Users/andrew/CLionProjects/UB-Bounds/Boundaries/Zone.cpp" "/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/CMakeFiles/Boundaries.dir/Zone.cpp.o"
   "/Users/andrew/CLionProjects/UB-Bounds/Boundaries/main.cpp" "/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/CMakeFiles/Boundaries.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "Clang")

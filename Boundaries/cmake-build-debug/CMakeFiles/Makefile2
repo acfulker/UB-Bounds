@@ -322,7 +322,7 @@ clean: CMakeFiles/ContinuousUpdate.dir/clean
 CMakeFiles/xmltest.dir/all: CMakeFiles/tinyxml2.dir/all
 	$(MAKE) -f CMakeFiles/xmltest.dir/build.make CMakeFiles/xmltest.dir/depend
 	$(MAKE) -f CMakeFiles/xmltest.dir/build.make CMakeFiles/xmltest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/CMakeFiles --progress-num= "Built target xmltest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/CMakeFiles --progress-num=10,11 "Built target xmltest"
 .PHONY : CMakeFiles/xmltest.dir/all
 
 # Include target in all.
@@ -332,7 +332,7 @@ all: CMakeFiles/xmltest.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/xmltest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/xmltest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/xmltest.dir/rule
@@ -423,7 +423,7 @@ clean: CMakeFiles/ExperimentalStart.dir/clean
 CMakeFiles/Boundaries.dir/all:
 	$(MAKE) -f CMakeFiles/Boundaries.dir/build.make CMakeFiles/Boundaries.dir/depend
 	$(MAKE) -f CMakeFiles/Boundaries.dir/build.make CMakeFiles/Boundaries.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target Boundaries"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target Boundaries"
 .PHONY : CMakeFiles/Boundaries.dir/all
 
 # Include target in all.
@@ -433,7 +433,7 @@ all: CMakeFiles/Boundaries.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Boundaries.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Boundaries.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/Boundaries.dir/rule
@@ -716,7 +716,7 @@ clean: CMakeFiles/uninstall.dir/clean
 CMakeFiles/tinyxml2.dir/all:
 	$(MAKE) -f CMakeFiles/tinyxml2.dir/build.make CMakeFiles/tinyxml2.dir/depend
 	$(MAKE) -f CMakeFiles/tinyxml2.dir/build.make CMakeFiles/tinyxml2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target tinyxml2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/CMakeFiles --progress-num=8,9 "Built target tinyxml2"
 .PHONY : CMakeFiles/tinyxml2.dir/all
 
 # Include target in all.
