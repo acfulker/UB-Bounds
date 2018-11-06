@@ -5,15 +5,16 @@
 #ifndef BOUNDARIES_ZONE_H
 #define BOUNDARIES_ZONE_H
 
+#include <vector>
 
 class Zone {
 private:
 
 public:
-    float *lats, *lons, *constant, *multiple;
-    int polyCorners;
     
-    Zone(float *lat, float *lon, int points);
+    int polyCorners;
+    std::vector<float> lats, lons, multiple, constant;
+    Zone(std::vector<float> lat, std::vector<float> lon, int points);
     
     ~Zone();
     

@@ -4,11 +4,11 @@
 
 #include "Zone.h"
 
-Zone::Zone(float *lat, float *lon, int points) : polyCorners(points) {
-    lats = new float[polyCorners];
-    lons = new float[polyCorners];
-    constant = new float[polyCorners];
-    multiple = new float[polyCorners];
+Zone::Zone(std::vector<float> lat, std::vector<float> lon, int points) : polyCorners(points) {
+    lats = lat;
+    lons = lon;
+    constant.resize(polyCorners);
+    multiple.resize(polyCorners);
     int   i, j=polyCorners-1 ;
     
     for(i=0; i<polyCorners; i++) {
@@ -25,7 +25,7 @@ Zone::Zone(float *lat, float *lon, int points) : polyCorners(points) {
 }
 
 Zone::~Zone() {
-    delete [] lats, lons, constant, multiple;
+    //delete [] lats, lons, constant, multiple;
 }
 
 bool Zone::inZone(double lat, double lon) {

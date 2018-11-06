@@ -1,7 +1,7 @@
 <controlled_region>
     <sector name="1">
         <zone name="Alumni Arena" size="4">
-            <point lat="43.000868" long="-78.780428" />
+            <point lat="43.000868" long="-78.780428"></point>
             <point lat="42.999495" long="-78.780428" />
             <point lat="42.999495" long="-78.782037" />
             <point lat="43.000868" long="-78.782037" />
