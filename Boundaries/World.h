@@ -15,7 +15,7 @@ private:
 //    list boxes;
 public:
     double range;
-    World(std::vector<std::vector<Zone>> world);
+    World(std::vector<std::vector<Zone>> &world);
     World(const World &other);
     ~World();
     

@@ -5,8 +5,7 @@
 #include "World.h"
 
 
-World::World::World(){}
-//World::World(list boxes){}
+World::World(std::vector<std::vector<Zone>> &world){}
 World::World(const World &other){}
 World::~World(){}
 /**
@@ -14,7 +13,7 @@ World::~World(){}
  * @param a
  * @return prioritized list of all bounds within DISTANCE_OF_IRRELEVANCE;
  */
-std::queue<Box> World::Near(Agent &a){
+std::queue<Zone> World::Near(Agent &a){
 //    double d;
 //    std::queue<Box> *near = new std::queue<Box>;
 //    for(Box i : boxes){

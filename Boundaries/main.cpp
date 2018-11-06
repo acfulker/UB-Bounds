@@ -10,6 +10,7 @@
 #include <ctime>
 #include <sys/stat.h>
 #include <sys/types.h>
+#include <vector>
 
 int setup();
 #if defined( _MSC_VER )
@@ -31,38 +32,44 @@ int setup() {
     if (region == nullptr) return XML_ERROR_FILE_READ_ERROR;
     XMLElement * sect = region->FirstChildElement("sector");
     if (sect == nullptr) return XML_ERROR_PARSING_ELEMENT;
-    XMLElement * zone = region->FirstChildElement("zone");
+    XMLElement * zone = sect->FirstChildElement("zone");
     if (zone == nullptr) return XML_ERROR_PARSING_ELEMENT;
-    XMLElement * point = region->FirstChildElement("point");
+    XMLElement * point = zone->FirstChildElement("point");
     if (point == nullptr) return XML_ERROR_PARSING_ELEMENT;
-    std::vector<std::vector<Zone>> wV = new std::vector;
+    std::vector<std::vector<Zone>> wV;
     while(sect != nullptr){//sector
-        std::vector<Zone> sectV = new std::vector;
+        std::vector<Zone> sectV;
         while(zone != nullptr){//zone
             int points=zone->IntAttribute("size");
-            float *latitudes = new float[points];
-            float *longitudes = new float[points];
+            std::vector<float> latitudes(points), longitudes(points);
             int i=0;
             while(point != nullptr){//point
-                latitudes[i]=point->FloatAttribute("latitude");
-                longitudes[i]=point->FloatAttribute("longitude");
-                if(i==points)//error
+                latitudes[i]=point->FloatAttribute("lat");
+                longitudes[i]=point->FloatAttribute("long");
+                std::cout << latitudes[i] << ", " << longitudes[i] << std::endl;
                 i++;
                 point=point->NextSiblingElement("point");
             }
-            Zone *z = new Zone(latitudes, longitudes, points)
-            sectV.push_back(z);
-            zone=zone->NextSiblingElement("zone");
+            Zone *z = new Zone(latitudes, longitudes, points);
+            sectV.push_back(*z);
+            zone=zone->NextSiblingElement();
+            if(zone == nullptr) break;
+            point = zone->FirstChildElement("point");
+            if (point == nullptr) return XML_ERROR_PARSING_ELEMENT;
+            
         }
-        sect=sect->NextSiblingElement("sector");
         wV.push_back(sectV);
+        sect=sect->NextSiblingElement("sector");
+        if(sect == nullptr) break;
+        zone = sect->FirstChildElement("zone");
+        if (zone == nullptr) return XML_ERROR_PARSING_ELEMENT;
     }
     
-    w = new World(wV);
+    //w = new World(wV);
     doc.Print();
-    
+    return 0;
 }
 
 int main(){
-    setup();
+    return setup();
 }
