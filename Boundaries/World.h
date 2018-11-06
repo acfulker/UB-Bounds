@@ -12,9 +12,10 @@
 
 class World {
 private:
-//    list boxes;
+
 public:
     double range;
+    std::vector<Zone> sectorList;
     World(std::vector<std::vector<Zone>> &world);
     World(const World &other);
     ~World();

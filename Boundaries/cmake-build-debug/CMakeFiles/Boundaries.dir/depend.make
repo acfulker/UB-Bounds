@@ -14,18 +14,18 @@ CMakeFiles/Boundaries.dir/Coord.cpp.o: ../Coord.cpp
 CMakeFiles/Boundaries.dir/Coord.cpp.o: ../Coord.h
 
 CMakeFiles/Boundaries.dir/World.cpp.o: ../Agent.h
-CMakeFiles/Boundaries.dir/World.cpp.o: ../Box.h
 CMakeFiles/Boundaries.dir/World.cpp.o: ../Coord.h
 CMakeFiles/Boundaries.dir/World.cpp.o: ../World.cpp
 CMakeFiles/Boundaries.dir/World.cpp.o: ../World.h
+CMakeFiles/Boundaries.dir/World.cpp.o: ../Zone.h
 
 CMakeFiles/Boundaries.dir/Zone.cpp.o: ../Zone.cpp
 CMakeFiles/Boundaries.dir/Zone.cpp.o: ../Zone.h
 
 CMakeFiles/Boundaries.dir/main.cpp.o: ../Agent.h
-CMakeFiles/Boundaries.dir/main.cpp.o: ../Box.h
 CMakeFiles/Boundaries.dir/main.cpp.o: ../Coord.h
 CMakeFiles/Boundaries.dir/main.cpp.o: ../World.h
+CMakeFiles/Boundaries.dir/main.cpp.o: ../Zone.h
 CMakeFiles/Boundaries.dir/main.cpp.o: ../main.cpp
 CMakeFiles/Boundaries.dir/main.cpp.o: ../tinyxml2.cpp
 CMakeFiles/Boundaries.dir/main.cpp.o: ../tinyxml2.h
