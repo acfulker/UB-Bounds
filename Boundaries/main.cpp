@@ -45,7 +45,7 @@ int setup() {
         std::vector<double> sLatitudes(4), sLongitudes(4);
         double n, s, e, w;
         n=sect->DoubleAttribute("north");
-        s=sect->DoubleAttribute()Attribute("south");
+        s=sect->DoubleAttribute("south");
         e=sect->DoubleAttribute("east");
         w=sect->DoubleAttribute("west");
         sLatitudes[0]=n;
