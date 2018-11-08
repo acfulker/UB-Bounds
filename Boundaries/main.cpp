@@ -42,12 +42,12 @@ int setup() {
         std::vector<Zone> zoneList;//list of zone objects in this sector
         
         //build this sector's Zone
-        std::vector<float> sLatitudes(4), sLongitudes(4);
-        float n, s, e, w;
-        n=sect->FloatAttribute("north");
-        s=sect->FloatAttribute("south");
-        e=sect->FloatAttribute("east");
-        w=sect->FloatAttribute("west");
+        std::vector<double> sLatitudes(4), sLongitudes(4);
+        double n, s, e, w;
+        n=sect->DoubleAttribute("north");
+        s=sect->DoubleAttribute()Attribute("south");
+        e=sect->DoubleAttribute("east");
+        w=sect->DoubleAttribute("west");
         sLatitudes[0]=n;
         sLatitudes[1]=n;
         sLatitudes[2]=s;
@@ -62,11 +62,11 @@ int setup() {
         
         while(zone != nullptr){//zone
             int points=zone->IntAttribute("size");
-            std::vector<float> latitudes(points), longitudes(points);
+            std::vector<double> latitudes(points), longitudes(points);
             int i=0;
             while(point != nullptr){//point
-                latitudes[i]=point->FloatAttribute("lat");//add point lat
-                longitudes[i]=point->FloatAttribute("long");//add point lon
+                latitudes[i]=point->DoubleAttribute("lat");//add point lat
+                longitudes[i]=point->DoubleAttribute("long");//add point lon
                 std::cout << latitudes[i] << ", " << longitudes[i] << std::endl;//print for testing
                 i++;
                 point=point->NextSiblingElement("point");
@@ -87,7 +87,7 @@ int setup() {
         if (zone == nullptr) return XML_ERROR_PARSING_ELEMENT;
     }
     
-    //w = new World(wV, sectList);
+    w = new World(wV, sectList);
     doc.Print();
     return 0;
 }

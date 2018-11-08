@@ -4,7 +4,7 @@
 
 #include "Zone.h"
 
-Zone::Zone(std::vector<float> lat, std::vector<float> lon, int points) : polyCorners(points) {
+Zone::Zone(std::vector<double> lat, std::vector<double> lon, int points) : polyCorners(points) {
     lats = lat;
     lons = lon;
     constant.resize(polyCorners);
@@ -27,10 +27,18 @@ Zone::Zone(std::vector<float> lat, std::vector<float> lon, int points) : polyCor
 Zone::~Zone() {
     //delete [] lats, lons, constant, multiple;
 }
+/**
+ * inPolygon function
+ * @param lat
+ * @param lon
+ * @return true if coordinates within zone
+ */
 
-bool Zone::inZone(double lat, double lon) {
-    int   i, j=polyCorners-1 ;
-    bool  oddNodes=false      ;
+bool Zone::inZone(Agent &a) {
+    double lat = a.lat;
+    double lon = a.lon;
+    int   i, j=polyCorners-1;
+    bool  oddNodes=false;
     
     for (i=0; i<polyCorners; i++) {
         if (((lats[i]< lat && lats[j]>=lat)

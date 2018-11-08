@@ -1,4 +1,4 @@
-# Install script for directory: /Users/andrew/CLionProjects/UB-Bounds/Boundaries
+# Install script for directory: /Users/annasholk/CLionProjects/UB-Bounds/Boundaries
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,14 +34,12 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES
-    "/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/libtinyxml2d.6.2.0.dylib"
-    "/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/libtinyxml2d.6.dylib"
-    "/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/libtinyxml2d.dylib"
+    "/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/libtinyxml2d.6.2.0.dylib"
+    "/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/libtinyxml2d.6.dylib"
     )
   foreach(file
       "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libtinyxml2d.6.2.0.dylib"
       "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libtinyxml2d.6.dylib"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libtinyxml2d.dylib"
       )
     if(EXISTS "${file}" AND
        NOT IS_SYMLINK "${file}")
@@ -56,22 +54,35 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE FILE FILES "/Users/andrew/CLionProjects/UB-Bounds/Boundaries/tinyxml2.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/libtinyxml2d.dylib")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libtinyxml2d.dylib" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libtinyxml2d.dylib")
+    execute_process(COMMAND "/usr/bin/install_name_tool"
+      -id "libtinyxml2d.6.dylib"
+      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libtinyxml2d.dylib")
+    if(CMAKE_INSTALL_DO_STRIP)
+      execute_process(COMMAND "/Library/Developer/CommandLineTools/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libtinyxml2d.dylib")
+    endif()
+  endif()
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/tinyxml2.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE FILE FILES "/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/tinyxml2.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/tinyxml2" TYPE FILE FILES "/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/tinyxml2Config.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/tinyxml2.pc")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/tinyxml2" TYPE FILE FILES "/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/tinyxml2Config.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/tinyxml2/tinyxml2Targets.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/tinyxml2/tinyxml2Targets.cmake"
-         "/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/CMakeFiles/Export/lib/cmake/tinyxml2/tinyxml2Targets.cmake")
+         "/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/CMakeFiles/Export/lib/cmake/tinyxml2/tinyxml2Targets.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/tinyxml2/tinyxml2Targets-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -80,9 +91,9 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/tinyxml2" TYPE FILE FILES "/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/CMakeFiles/Export/lib/cmake/tinyxml2/tinyxml2Targets.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/tinyxml2" TYPE FILE FILES "/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/CMakeFiles/Export/lib/cmake/tinyxml2/tinyxml2Targets.cmake")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/tinyxml2" TYPE FILE FILES "/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/CMakeFiles/Export/lib/cmake/tinyxml2/tinyxml2Targets-debug.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/tinyxml2" TYPE FILE FILES "/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/CMakeFiles/Export/lib/cmake/tinyxml2/tinyxml2Targets-debug.cmake")
   endif()
 endif()
 
@@ -94,5 +105,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

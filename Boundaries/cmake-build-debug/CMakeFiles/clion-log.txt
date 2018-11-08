@@ -1,4 +1,4 @@
-/Applications/CLion.app/Contents/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/andrew/CLionProjects/UB-Bounds/Boundaries
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/annasholk/CLionProjects/UB-Bounds/Boundaries
 -- Configuring done
 CMake Warning (dev):
   Policy CMP0042 is not set: MACOSX_RPATH is enabled by default.  Run "cmake
@@ -12,4 +12,4 @@ CMake Warning (dev):
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
 -- Generating done
--- Build files have been written to: /Users/andrew/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug
+-- Build files have been written to: /Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug

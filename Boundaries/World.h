@@ -14,13 +14,15 @@ class World {
 private:
 
 public:
-    double range;
+
     std::vector<Zone> sectorList;
-    World(std::vector<std::vector<Zone>> &world);
+    std::vector<std::vector<Zone>> worldList;
+    World(std::vector<std::vector<Zone>> &world, std::vector<Zone> &sectList) : worldList(world), sectorList(sectList) {};
     World(const World &other);
     ~World();
-    
-    std::queue<Zone> Near(Agent &a);//needs work
+
+    bool canFly(Agent &a);
+    std::vector<Zone> Near(Agent &a);//needs work
     
 };
 

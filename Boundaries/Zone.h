@@ -6,6 +6,7 @@
 #define BOUNDARIES_ZONE_H
 
 #include <vector>
+#include "Agent.h"
 
 class Zone {
 private:
@@ -13,12 +14,12 @@ private:
 public:
     
     int polyCorners;
-    std::vector<float> lats, lons, multiple, constant;
-    Zone(std::vector<float> lat, std::vector<float> lon, int points);
+    std::vector<double> lats, lons, multiple, constant;
+    Zone(std::vector<double> lat, std::vector<double> lon, int points);
     
     ~Zone();
     
-    bool inZone(double lat, double lon);
+    bool inZone(Agent &a);
 
 };
 
