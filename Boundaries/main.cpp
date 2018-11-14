@@ -67,7 +67,7 @@ int setup() {
             while(point != nullptr){//point
                 latitudes[i]=point->DoubleAttribute("lat");//add point lat
                 longitudes[i]=point->DoubleAttribute("long");//add point lon
-                std::cout << latitudes[i] << ", " << longitudes[i] << std::endl;//print for testing
+                //std::cout << latitudes[i] << ", " << longitudes[i] << std::endl;//print for testing
                 i++;
                 point=point->NextSiblingElement("point");
             }
@@ -88,10 +88,15 @@ int setup() {
     }
     
     w = new World(wV, sectList);
-    doc.Print();
+    //doc.Print();
     return 0;
 }
 
 int main(){
-    return setup();
+    setup();
+    Coord c = Coord(41.003, -78.781);
+    Agent a = Agent(c);
+    bool fly = w->canFly(a);
+    std::cout << fly << std::endl;
+    return 0;
 }
