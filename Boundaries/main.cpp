@@ -13,6 +13,7 @@
 #include <vector>
 
 int setup();
+Coord nearestPoin2Line(Coord drone,Coord ep1,Coord ep2);
 #if defined( _MSC_VER )
 #if !defined( _CRT_SECURE_NO_WARNINGS )
 		#define _CRT_SECURE_NO_WARNINGS		// This test file is not intended to be secure.
@@ -91,6 +92,31 @@ int setup() {
     //doc.Print();
     return 0;
 }
+
+/**
+ *
+ * @param drone, ep1, ep2
+ * @return the closest point on a line to the drone
+**/
+Coord nearestPoint2Line(Coord drone,Coord ep1,Coord ep2){
+    double threshold;
+    Coord p1 = ep1, p2 = ep2;
+    double d1 = drone.distanceTo(p1), d2 = drone.distanceTo(p2);
+    double diff = abs(d1-d2); //make sure abs function works
+    while(diff>threshold){
+        if(d1>d2){
+            p1 = p1.midpoint(p2); //create function
+            d1 = drone.distanceTo(p1);
+        }
+        else{
+            p2 = p2.midpoint(p1);
+            d2 = drone.distanceTo(p2);
+        }
+        diff = abs(d1-d2);
+    }
+    return p1.midpoint(p2);
+}
+
 
 int main(){
     setup();

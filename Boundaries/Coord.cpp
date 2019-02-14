@@ -21,3 +21,14 @@ double Coord::distanceTo(Coord &other){
     dist = c*(100/.0003);
     return dist;
 }
+
+/**
+ *
+ * @param other
+ * @return midpoint between other and this
+ */
+Coord Coord::midpoint(Coord &other){
+    double x = (other.longitude - longitude)/2;
+    double y = (other.latitude   - latitude)/2;
+    return Coord(latitude+y, longitude+x);
+}

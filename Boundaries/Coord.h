@@ -17,7 +17,7 @@ public:
 
     
     double distanceTo(Coord &other);
-    
+    Coord midpoint(Coord &other);
     
 };
 
