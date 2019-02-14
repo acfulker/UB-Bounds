@@ -17,6 +17,7 @@ public:
     
     Agent();
     Agent(Coord &coord);
+    Coord nearestPoint2Line(Coord ep1,Coord ep2);
     
 };
 

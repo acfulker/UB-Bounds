@@ -32,3 +32,4 @@ Coord Coord::midpoint(Coord &other){
     double y = (other.latitude   - latitude)/2;
     return Coord(latitude+y, longitude+x);
 }
+
