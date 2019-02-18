@@ -23,6 +23,7 @@ public:
 
     bool canFly(Agent &a);
     std::vector<Zone> Near(Agent &a);//needs work
+    bool takeAction(Agent &a); //similar to canFly
     
 };
 

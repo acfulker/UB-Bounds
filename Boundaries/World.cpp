@@ -35,3 +35,39 @@ bool World::canFly(Agent &a) {
 std::vector<Zone> World::Near(Agent &a) {
 
 };
+
+/**
+ *
+ * @param a
+ * @return false for continue (no boundary nearby)
+ */
+bool World::takeAction(Agent &a){
+    int j = -1;
+    for (int i=0; i < sectorList.size(); i++){
+        if (sectorList[i].inZone(a)){
+            j=i;
+            break;
+        }//if
+    }//for
+    if (j==-1){
+        return false;
+    }//if
+
+    Coord nearest;
+    double shortest = 1000000;
+    for (int i=0; i < worldList[j].size(); i++){
+        for (int m=0; m < worldList[j][i].polyCorners-1; m++){
+            Coord n = a.nearestPoint2Line(worldList[j][i].edges[m]);
+            double ndist = a.loc.distanceTo(n);
+            if (ndist < shortest){
+                shortest = ndist;
+                nearest = n;
+            }//end if
+        }//end for m
+    }//end for i
+    if (shortest <= threshold){ //add threshold!!
+        return true;
+    }
+    return false;
+
+}

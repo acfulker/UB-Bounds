@@ -6,6 +6,7 @@
 #define BOUNDARIES_AGENT_H
 
 #include "Coord.h"
+#include "Line.h"
 
 
 class Agent {
@@ -17,7 +18,7 @@ public:
     
     Agent();
     Agent(Coord &coord);
-    Coord nearestPoint2Line(Coord ep1,Coord ep2);
+    Coord nearestPoint2Line(Line l);
     
 };
 
