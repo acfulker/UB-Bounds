@@ -12,6 +12,7 @@ Agent::Agent(){
 Agent::Agent(Coord &coord) {
     lat = coord.latitude;
     lon = coord.longitude;
+    loc = coord;
 }
 
 /**
@@ -20,10 +21,10 @@ Agent::Agent(Coord &coord) {
  * @return the closest point on a line to the drone (loc)
 **/
 Coord Agent::nearestPoint2Line(Line l){
-    double threshold;
+    double threshold = 10;
     Coord p1 = l.p1, p2 = l.p2;
     double d1 = loc.distanceTo(p1), d2 = loc.distanceTo(p2);
-    double diff = abs(d1-d2); //make sure abs function works
+    double diff = abs(d1-d2);
     while(diff>threshold){
         if(d1>d2){
             p1 = p1.midpoint(p2);

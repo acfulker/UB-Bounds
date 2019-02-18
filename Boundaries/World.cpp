@@ -32,9 +32,6 @@ bool World::canFly(Agent &a) {
     return true;
 };
 
-std::vector<Zone> World::Near(Agent &a) {
-
-};
 
 /**
  *
@@ -65,7 +62,7 @@ bool World::takeAction(Agent &a){
             }//end if
         }//end for m
     }//end for i
-    if (shortest <= threshold){ //add threshold!!
+    if (shortest <= THRESHOLD) {
         return true;
     }
     return false;

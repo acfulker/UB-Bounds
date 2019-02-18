@@ -16,7 +16,7 @@ public:
     
     int polyCorners;
     std::vector<double> lats, lons, multiple, constant;
-    std::vector<Line> edges
+    std::vector<Line> edges;
     Zone(std::vector<double> lat, std::vector<double> lon, int points);
     
     ~Zone();

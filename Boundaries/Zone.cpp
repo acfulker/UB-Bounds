@@ -55,7 +55,7 @@ bool Zone::inZone(Agent &a) {
  * @return vector of lines representing edges of zone
  */
 void Zone::edgeList(){
-    for (int i=0; i < polyCorners-2; i++){
+    for (int i=0; i < polyCorners-1; i++){
         edges.emplace_back(Line(Coord(lats[i],lons[i]), Coord(lats[i+1],lons[i+1])));
     }
     edges.emplace_back(Line(Coord(lats[0],lons[0]), Coord(lats[polyCorners-1],lons[polyCorners-1])));

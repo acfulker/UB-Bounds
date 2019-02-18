@@ -98,9 +98,11 @@ int setup() {
 
 int main(){
     setup();
-    Coord c = Coord(41.003, -78.781);
+    Coord c = Coord(42.9995, -78.7815);
     Agent a = Agent(c);
     bool fly = w->canFly(a);
+    bool react = w->takeAction(a);
     std::cout << fly << std::endl;
+    std::cout << react << std::endl;
     return 0;
 }

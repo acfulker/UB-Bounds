@@ -12,8 +12,7 @@ private:
 
 public:
     Coord p1, p2;
-    Line(Coord p1, Coord p2){} : p1(p1), p2(p2);
-
+    Line(Coord point1, Coord point2) : p1(point1), p2(point2){};
 
 };
 

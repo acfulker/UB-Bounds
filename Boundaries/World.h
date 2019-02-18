@@ -12,6 +12,7 @@
 
 class World {
 private:
+    const double THRESHOLD = 100;
 
 public:
 
@@ -22,8 +23,8 @@ public:
     ~World();
 
     bool canFly(Agent &a);
-    std::vector<Zone> Near(Agent &a);//needs work
     bool takeAction(Agent &a); //similar to canFly
+
     
 };
 
