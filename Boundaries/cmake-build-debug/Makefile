@@ -664,6 +664,33 @@ Coord.cpp.s:
 	$(MAKE) -f CMakeFiles/Boundaries.dir/build.make CMakeFiles/Boundaries.dir/Coord.cpp.s
 .PHONY : Coord.cpp.s
 
+Line.o: Line.cpp.o
+
+.PHONY : Line.o
+
+# target to build an object file
+Line.cpp.o:
+	$(MAKE) -f CMakeFiles/Boundaries.dir/build.make CMakeFiles/Boundaries.dir/Line.cpp.o
+.PHONY : Line.cpp.o
+
+Line.i: Line.cpp.i
+
+.PHONY : Line.i
+
+# target to preprocess a source file
+Line.cpp.i:
+	$(MAKE) -f CMakeFiles/Boundaries.dir/build.make CMakeFiles/Boundaries.dir/Line.cpp.i
+.PHONY : Line.cpp.i
+
+Line.s: Line.cpp.s
+
+.PHONY : Line.s
+
+# target to generate assembly for a file
+Line.cpp.s:
+	$(MAKE) -f CMakeFiles/Boundaries.dir/build.make CMakeFiles/Boundaries.dir/Line.cpp.s
+.PHONY : Line.cpp.s
+
 World.o: World.cpp.o
 
 .PHONY : World.o
@@ -853,6 +880,9 @@ help:
 	@echo "... Coord.o"
 	@echo "... Coord.i"
 	@echo "... Coord.s"
+	@echo "... Line.o"
+	@echo "... Line.i"
+	@echo "... Line.s"
 	@echo "... World.o"
 	@echo "... World.i"
 	@echo "... World.s"

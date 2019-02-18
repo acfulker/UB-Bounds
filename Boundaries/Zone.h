@@ -7,6 +7,7 @@
 
 #include <vector>
 #include "Agent.h"
+#include "Line.h"
 
 class Zone {
 private:
@@ -15,11 +16,13 @@ public:
     
     int polyCorners;
     std::vector<double> lats, lons, multiple, constant;
+    std::vector<Line> edges
     Zone(std::vector<double> lat, std::vector<double> lon, int points);
     
     ~Zone();
     
     bool inZone(Agent &a);
+    void edgeList();
 
 };
 

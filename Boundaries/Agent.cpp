@@ -26,7 +26,7 @@ Coord Agent::nearestPoint2Line(Coord ep1,Coord ep2){
     double diff = abs(d1-d2); //make sure abs function works
     while(diff>threshold){
         if(d1>d2){
-            p1 = p1.midpoint(p2); 
+            p1 = p1.midpoint(p2);
             d1 = loc.distanceTo(p1);
         }
         else{

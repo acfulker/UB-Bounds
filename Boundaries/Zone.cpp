@@ -3,6 +3,7 @@
 //
 
 #include "Zone.h"
+#include "Line.h"
 
 Zone::Zone(std::vector<double> lat, std::vector<double> lon, int points) : polyCorners(points) {
     lats = lat;
@@ -21,7 +22,7 @@ Zone::Zone(std::vector<double> lat, std::vector<double> lon, int points) : polyC
             multiple[i]=(lons[j]-lons[i])/(lats[j]-lats[i]); 
         }
         j=i; 
-    }
+    }//end for
 }
 
 Zone::~Zone() {
@@ -47,4 +48,16 @@ bool Zone::inZone(Agent &a) {
         j=i; }
     
     return oddNodes; 
+}
+
+/**
+ * edges function
+ * @return vector of lines representing edges of zone
+ */
+void Zone::edgeList(){
+    for (int i=0; i < polyCorners-2; i++){
+        edges.emplace_back(Line(Coord(lats[i],lons[i]), Coord(lats[i+1],lons[i+1])));
+    }
+    edges.emplace_back(Line(Coord(lats[0],lons[0]), Coord(lats[polyCorners-1],lons[polyCorners-1])));
+
 }

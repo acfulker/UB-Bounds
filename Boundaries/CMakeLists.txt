@@ -128,4 +128,4 @@ install(FILES
 
 install(EXPORT ${CMAKE_PROJECT_NAME}Targets NAMESPACE tinyxml2::
         DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/${CMAKE_PROJECT_NAME})
-add_executable(Boundaries main.cpp Box.cpp Box.h ../World.cpp ../World.h ../Agent.cpp ../Agent.h Agent.cpp Agent.h World.cpp World.h Coord.cpp Coord.h Zone.cpp Zone.h)
+add_executable(Boundaries main.cpp Box.cpp Box.h ../World.cpp ../World.h ../Agent.cpp ../Agent.h Agent.cpp Agent.h World.cpp World.h Coord.cpp Coord.h Zone.cpp Zone.h Line.cpp Line.h)

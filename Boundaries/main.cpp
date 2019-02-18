@@ -73,6 +73,7 @@ int setup() {
             }
             
             Zone *z = new Zone(latitudes, longitudes, points);
+            z->edgeList();
             zoneList.push_back(*z);
             zone=zone->NextSiblingElement();
             if(zone == nullptr) break;//check if last zone
