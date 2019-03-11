@@ -15,6 +15,7 @@ private:
 public:
     Coord loc;
     double lat, lon;
+    double bear;
     
     Agent();
     Agent(Coord &coord);

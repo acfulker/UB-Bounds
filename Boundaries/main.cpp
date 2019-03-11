@@ -101,7 +101,7 @@ int main(){
     Coord c = Coord(42.9995, -78.7815);
     Agent a = Agent(c);
     bool fly = w->canFly(a);
-    bool react = w->takeAction(a);
+    bool react = w->nearBound(a);
     std::cout << fly << std::endl;
     std::cout << react << std::endl;
     return 0;

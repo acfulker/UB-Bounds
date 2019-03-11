@@ -8,11 +8,13 @@ Agent::Agent(){
     auto loc = Coord();
     lat = 0;
     lon = 0;
+    bear = 0;
 }
-Agent::Agent(Coord &coord) {
+Agent::Agent(Coord &coord, int bearing) {
     lat = coord.latitude;
     lon = coord.longitude;
     loc = coord;
+    bear = bearing;
 }
 
 /**

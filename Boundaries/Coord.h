@@ -18,6 +18,10 @@ public:
     
     double distanceTo(Coord &other);
     Coord midpoint(Coord &other);
+    double bearingTo(Coord &other);
+    Coord pointAt(double dist, double bearing);
+
+    double normalizeB(double bearing);
 
     
 };

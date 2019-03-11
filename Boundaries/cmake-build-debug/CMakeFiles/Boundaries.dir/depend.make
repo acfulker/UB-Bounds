@@ -4,28 +4,37 @@
 CMakeFiles/Boundaries.dir/Agent.cpp.o: ../Agent.cpp
 CMakeFiles/Boundaries.dir/Agent.cpp.o: ../Agent.h
 CMakeFiles/Boundaries.dir/Agent.cpp.o: ../Coord.h
+CMakeFiles/Boundaries.dir/Agent.cpp.o: ../Line.h
 
 CMakeFiles/Boundaries.dir/Box.cpp.o: ../Agent.h
 CMakeFiles/Boundaries.dir/Box.cpp.o: ../Box.cpp
 CMakeFiles/Boundaries.dir/Box.cpp.o: ../Box.h
 CMakeFiles/Boundaries.dir/Box.cpp.o: ../Coord.h
+CMakeFiles/Boundaries.dir/Box.cpp.o: ../Line.h
 
 CMakeFiles/Boundaries.dir/Coord.cpp.o: ../Coord.cpp
 CMakeFiles/Boundaries.dir/Coord.cpp.o: ../Coord.h
 
+CMakeFiles/Boundaries.dir/Line.cpp.o: ../Coord.h
+CMakeFiles/Boundaries.dir/Line.cpp.o: ../Line.cpp
+CMakeFiles/Boundaries.dir/Line.cpp.o: ../Line.h
+
 CMakeFiles/Boundaries.dir/World.cpp.o: ../Agent.h
 CMakeFiles/Boundaries.dir/World.cpp.o: ../Coord.h
+CMakeFiles/Boundaries.dir/World.cpp.o: ../Line.h
 CMakeFiles/Boundaries.dir/World.cpp.o: ../World.cpp
 CMakeFiles/Boundaries.dir/World.cpp.o: ../World.h
 CMakeFiles/Boundaries.dir/World.cpp.o: ../Zone.h
 
 CMakeFiles/Boundaries.dir/Zone.cpp.o: ../Agent.h
 CMakeFiles/Boundaries.dir/Zone.cpp.o: ../Coord.h
+CMakeFiles/Boundaries.dir/Zone.cpp.o: ../Line.h
 CMakeFiles/Boundaries.dir/Zone.cpp.o: ../Zone.cpp
 CMakeFiles/Boundaries.dir/Zone.cpp.o: ../Zone.h
 
 CMakeFiles/Boundaries.dir/main.cpp.o: ../Agent.h
 CMakeFiles/Boundaries.dir/main.cpp.o: ../Coord.h
+CMakeFiles/Boundaries.dir/main.cpp.o: ../Line.h
 CMakeFiles/Boundaries.dir/main.cpp.o: ../World.h
 CMakeFiles/Boundaries.dir/main.cpp.o: ../Zone.h
 CMakeFiles/Boundaries.dir/main.cpp.o: ../main.cpp

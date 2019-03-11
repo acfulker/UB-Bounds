@@ -23,8 +23,9 @@ public:
     ~World();
 
     bool canFly(Agent &a);
-    bool takeAction(Agent &a); //similar to canFly
-
+    bool nearBound(Agent &a); //similar to canFly
+    Coord makeNew(Agent &a, Coord nearest);
+    double angleBetween(double b1, double b2);
     
 };
 

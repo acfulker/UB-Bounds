@@ -3,7 +3,8 @@
 //
 
 #include "World.h"
-
+#include "Coord.h"
+#include <math.h>
 World::World(const World &other){}
 World::~World(){}
 
@@ -38,7 +39,7 @@ bool World::canFly(Agent &a) {
  * @param a
  * @return false for continue (no boundary nearby)
  */
-bool World::takeAction(Agent &a){
+Coord World::nearBound(Agent &a){
     int j = -1;
     for (int i=0; i < sectorList.size(); i++){
         if (sectorList[i].inZone(a)){
@@ -47,7 +48,7 @@ bool World::takeAction(Agent &a){
         }//if
     }//for
     if (j==-1){
-        return false;
+        return nullptr;
     }//if
 
     Coord nearest;
@@ -63,8 +64,47 @@ bool World::takeAction(Agent &a){
         }//end for m
     }//end for i
     if (shortest <= THRESHOLD) {
-        return true;
+        return nearest;
     }
-    return false;
+    return nullptr;
 
+}
+/**
+ *
+ * @param a agent object
+ * @param nearest coordinate of nearest point on nearest bound
+ * @return new coordinate to travel to
+ */
+Coord World::makeNew(Agent &a, Coord nearest){
+    double dist = a.loc.distanceTo(nearest);
+    double bearingToBound = a.loc.bearingTo(nearest);
+    double leftRight = bearingBetween(a.bear, bearingToBound);
+    double theta = abs(leftRight);
+    double dPath = dist/cos(theta);
+    double dToNew = cos(90-theta)*dPath;
+    double bToNew =
+    return a.loc.pointAt(dToNew, bToNew);
+
+
+    }
+}
+
+
+
+/**
+ *
+ * @param b1
+ * @param b2
+ * @return relative angle from b1 to b2
+ */
+double World::angleBetween(double b1, double b2){
+    Coord c;
+    b1 = c.normalizeB(b1);
+    b2 = c.normalizeB(b2);
+    double a1 = b2-b1;
+    if (abs(a1)<=180){
+        return a1;
+    } else {
+        return 360-a1;
+    }
 }
