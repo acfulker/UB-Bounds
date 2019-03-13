@@ -4,6 +4,8 @@
 
 #include "Coord.h"
 #include <math.h>
+#define PI 3.14159265358979
+
 /**
  *
  * @param other
@@ -42,7 +44,12 @@ Coord Coord::midpoint(Coord &other){
 double Coord::bearingTo(Coord &other){
     double x = other.longitude-longitude;
     double y = other.latitude-latitude;
-    return atan(x/y);
+    double phi = atan(y/x)*(180/PI);
+    if (y<0){
+        phi+=180;
+    }
+
+    return normalizeB(phi);
 }
 /**
  *
@@ -51,6 +58,7 @@ double Coord::bearingTo(Coord &other){
  * @return point at bearing and distance
  */
 Coord Coord::pointAt(double dist, double bearing){
+    dist = dist*(.0003/100);
     double ref = fmod(bearing, 90.0);
     Coord p(*this);
     //dist to degrees units

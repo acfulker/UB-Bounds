@@ -23,7 +23,7 @@ public:
     ~World();
 
     bool canFly(Agent &a);
-    bool nearBound(Agent &a); //similar to canFly
+    Coord nearBound(Agent &a); //similar to canFly
     Coord makeNew(Agent &a, Coord nearest);
     double angleBetween(double b1, double b2);
     

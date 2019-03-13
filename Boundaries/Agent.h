@@ -18,7 +18,7 @@ public:
     double bear;
     
     Agent();
-    Agent(Coord &coord);
+    Agent(Coord &coord, int bearing);
     Coord nearestPoint2Line(Line l);
     
 };

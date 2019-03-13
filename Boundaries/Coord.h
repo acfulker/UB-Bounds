@@ -12,8 +12,10 @@ private:
 
 public:
     double latitude, longitude;
+    bool null;
     Coord(){};
-    Coord(double lat, double lon) : latitude(lat), longitude(lon) {};
+    Coord(double lat, double lon) : latitude(lat), longitude(lon), null(false) {};
+    Coord(bool null) : null(null){};
 
     
     double distanceTo(Coord &other);

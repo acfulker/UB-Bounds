@@ -11,6 +11,7 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <vector>
+#include <stdio.h>
 
 int setup();
 #if defined( _MSC_VER )
@@ -98,11 +99,17 @@ int setup() {
 
 int main(){
     setup();
-    Coord c = Coord(42.9995, -78.7815);
-    Agent a = Agent(c);
+    Coord c = Coord(43.00086811, -78.781);
+    Agent a = Agent(c, 180);
     bool fly = w->canFly(a);
-    bool react = w->nearBound(a);
+    Coord react = w->nearBound(a);
     std::cout << fly << std::endl;
-    std::cout << react << std::endl;
+    Coord destination;
+    if (!react.null){
+        destination = w->makeNew(a, react);
+        std:cout << destination.latitude << "  " << destination.longitude << std::endl;
+    }
+    std::cout << react.null << std::endl;
+
     return 0;
 }

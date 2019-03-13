@@ -48,13 +48,13 @@ Coord World::nearBound(Agent &a){
         }//if
     }//for
     if (j==-1){
-        return nullptr;
+        return Coord(true);
     }//if
 
     Coord nearest;
     double shortest = 1000000;
     for (int i=0; i < worldList[j].size(); i++){
-        for (int m=0; m < worldList[j][i].polyCorners-1; m++){
+        for (int m=0; m < worldList[j][i].polyCorners; m++){
             Coord n = a.nearestPoint2Line(worldList[j][i].edges[m]);
             double ndist = a.loc.distanceTo(n);
             if (ndist < shortest){
@@ -66,7 +66,7 @@ Coord World::nearBound(Agent &a){
     if (shortest <= THRESHOLD) {
         return nearest;
     }
-    return nullptr;
+    return Coord(true);
 
 }
 /**
@@ -78,15 +78,22 @@ Coord World::nearBound(Agent &a){
 Coord World::makeNew(Agent &a, Coord nearest){
     double dist = a.loc.distanceTo(nearest);
     double bearingToBound = a.loc.bearingTo(nearest);
-    double leftRight = bearingBetween(a.bear, bearingToBound);
+    double leftRight = angleBetween(a.bear, bearingToBound);
+    if (leftRight==0) {
+        return a.loc;
+    }
     double theta = abs(leftRight);
     double dPath = dist/cos(theta);
     double dToNew = cos(90-theta)*dPath;
-    double bToNew =
-    return a.loc.pointAt(dToNew, bToNew);
-
-
+    double bToNew;
+    if (leftRight>0) {
+        bToNew = bearingToBound+90;
+    } else {
+        bToNew = bearingToBound-90;
     }
+    bToNew = nearest.normalizeB(bToNew);
+
+    return a.loc.pointAt(dToNew, bToNew);
 }
 
 
