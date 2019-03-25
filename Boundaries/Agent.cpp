@@ -10,7 +10,7 @@ Agent::Agent(){
     lon = 0;
     bear = 0;
 }
-Agent::Agent(Coord &coord, int bearing) {
+Agent::Agent(Coord &coord, double bearing) {
     lat = coord.latitude;
     lon = coord.longitude;
     loc = coord;

@@ -26,7 +26,9 @@ public:
     Coord nearBound(Agent &a); //similar to canFly
     Coord makeNew(Agent &a, Coord nearest);
     double angleBetween(double b1, double b2);
-    
+
+    double cosDeg(double deg);
+    //double sinDeg(double deg);
 };
 
 

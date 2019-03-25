@@ -24,7 +24,8 @@ public:
     Coord pointAt(double dist, double bearing);
 
     double normalizeB(double bearing);
-
+    double cosDeg(double deg);
+    double sinDeg(double deg);
     
 };
 

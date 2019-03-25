@@ -8,6 +8,14 @@
 World::World(const World &other){}
 World::~World(){}
 
+#define PI 3.14159265358979
+
+double World::cosDeg(double deg){
+    return cos(deg*(PI/180));
+}
+//double World::sinDeg(double deg){
+//    return sin(deg*(PI/180));
+//}
 /**
  *
  * @param a
@@ -78,13 +86,13 @@ Coord World::nearBound(Agent &a){
 Coord World::makeNew(Agent &a, Coord nearest){
     double dist = a.loc.distanceTo(nearest);
     double bearingToBound = a.loc.bearingTo(nearest);
-    double leftRight = angleBetween(a.bear, bearingToBound);
+    double leftRight = angleBetween(bearingToBound,a.bear);
     if (leftRight==0) {
         return a.loc;
     }
     double theta = abs(leftRight);
-    double dPath = dist/cos(theta);
-    double dToNew = cos(90-theta)*dPath;
+    double dPath = dist/cosDeg(theta);
+    double dToNew = cosDeg(90-theta)*dPath;
     double bToNew;
     if (leftRight>0) {
         bToNew = bearingToBound+90;

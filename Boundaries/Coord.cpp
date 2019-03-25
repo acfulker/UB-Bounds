@@ -6,6 +6,13 @@
 #include <math.h>
 #define PI 3.14159265358979
 
+double Coord::cosDeg(double deg){
+    return cos(deg*(PI/180));
+}
+double Coord::sinDeg(double deg){
+    return sin(deg*(PI/180));
+}
+
 /**
  *
  * @param other
@@ -64,17 +71,17 @@ Coord Coord::pointAt(double dist, double bearing){
     //dist to degrees units
     bearing = normalizeB(bearing);
     if (bearing>=0&&bearing<90) {
-       p.latitude+=dist*cos(ref);
-       p.longitude+=dist*sin(ref);
+       p.latitude+=dist*cosDeg(ref);
+       p.longitude+=dist*sinDeg(ref);
     } else if(bearing>=90&&bearing<180){
-        p.latitude-=dist*sin(ref);
-        p.longitude+=dist*cos(ref);
+        p.latitude-=dist*sinDeg(ref);
+        p.longitude+=dist*cosDeg(ref);
     } else if (bearing>=180&&bearing<270){
-        p.latitude-=dist*cos(ref);
-        p.longitude-=dist*sin(ref);
+        p.latitude-=dist*cosDeg(ref);
+        p.longitude-=dist*sinDeg(ref);
     } else {
-        p.latitude+=dist*sin(ref);
-        p.longitude-=dist*cos(ref);
+        p.latitude+=dist*sinDeg(ref);
+        p.longitude-=dist*cosDeg(ref);
     }
     return p;
 }

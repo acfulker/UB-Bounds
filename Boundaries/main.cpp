@@ -100,15 +100,37 @@ int setup() {
 int main(){
     setup();
     Coord c = Coord(43.00086811, -78.781);
-    Agent a = Agent(c, 180);
+    Agent a = Agent(c, 170);
     bool fly = w->canFly(a);
     Coord react = w->nearBound(a);
+
     std::cout << fly << std::endl;
     Coord destination;
     if (!react.null){
         destination = w->makeNew(a, react);
+        Agent checkA = Agent(destination,a.loc.bearingTo(destination));
+        if (w->canFly(checkA)){
+            Coord react2 = w->nearBound(checkA);
+            if (!react2.null) {
+                destination = w->makeNew(checkA, react2);
+                checkA = Agent(destination, checkA.loc.bearingTo(destination));
+                if (!w->canFly(checkA)){
+                    destination = a.loc;
+                } //if no fly zone, send to original location
+                else{
+                    react2 = w->nearBound(checkA);
+                    if(!react2.null){
+                        destination = a.loc;
+                    } // if still near bound, send original location
+                } //check 2nd poss. destination
+            } // check possible destination near bound
+        } // check possible location can fly
+        else {
+            destination = a.loc;
+        } //check if poss. location no fly
         std:cout << destination.latitude << "  " << destination.longitude << std::endl;
     }
+
     std::cout << react.null << std::endl;
 
     return 0;
