@@ -12,8 +12,15 @@
 #include <sys/types.h>
 #include <vector>
 #include <stdio.h>
+//#include <sys/socket.h>
+//#include <netinet/in.h>
+//#include <netdb.h>
+//#include <unistd.h>
+//#include <arpa/inet.h>
 
-int setup();
+World* setupDB();
+//int setupSOCKET();
+Coord packetRec(World* w);
 #if defined( _MSC_VER )
 #if !defined( _CRT_SECURE_NO_WARNINGS )
 		#define _CRT_SECURE_NO_WARNINGS		// This test file is not intended to be secure.
@@ -23,20 +30,20 @@ int setup();
 using namespace tinyxml2;
 using namespace std;
 
-World *w;
+//World *w;
 
-int setup() {
+World* setupDB() {
     XMLDocument doc;
-    doc.LoadFile( "boxes.xml" );
+    doc.LoadFile("testing.xml");
     
     XMLNode * region = doc.FirstChild();
-    if (region == nullptr) return XML_ERROR_FILE_READ_ERROR;
+    if (region == nullptr) throw XML_ERROR_FILE_READ_ERROR;
     XMLElement * sect = region->FirstChildElement("sector");
-    if (sect == nullptr) return XML_ERROR_PARSING_ELEMENT;
+    if (sect == nullptr) throw XML_ERROR_PARSING_ELEMENT;
     XMLElement * zone = sect->FirstChildElement("zone");
-    if (zone == nullptr) return XML_ERROR_PARSING_ELEMENT;
+    if (zone == nullptr) throw XML_ERROR_PARSING_ELEMENT;
     XMLElement * point = zone->FirstChildElement("point");
-    if (point == nullptr) return XML_ERROR_PARSING_ELEMENT;
+    if (point == nullptr) throw XML_ERROR_PARSING_ELEMENT;
     std::vector<std::vector<Zone>> wV;
     std::vector<Zone> sectList;//list of sectors as Zone objects
     while(sect != nullptr){//sector
@@ -79,59 +86,92 @@ int setup() {
             zone=zone->NextSiblingElement();
             if(zone == nullptr) break;//check if last zone
             point = zone->FirstChildElement("point");
-            if (point == nullptr) return XML_ERROR_PARSING_ELEMENT;
+            if (point == nullptr) throw XML_ERROR_PARSING_ELEMENT;
             
         }
         wV.push_back(zoneList);
         sect=sect->NextSiblingElement("sector");
         if(sect == nullptr) break;//check if last sector
         zone = sect->FirstChildElement("zone");
-        if (zone == nullptr) return XML_ERROR_PARSING_ELEMENT;
+        if (zone == nullptr) throw XML_ERROR_PARSING_ELEMENT;
     }
     
-    w = new World(wV, sectList);
+    World* w = new World(wV, sectList);
     //doc.Print();
-    return 0;
+    return w;
+}
+//
+//int setupSOCKET(){
+//    int sock = socket(AF_INET, SOCK_STREAM, 0); //AF_INET for IPv4, SOCK_STREAM for TCP, 0 for any protocol
+//    sockaddr_in serverAddr;
+//    serverAddr.sin_family = AF_INET;
+//    serverAddr.sin_port = SERVER_PORT;
+//    serverAddr.sin_addr.s_addr = INADDR_ANY;
+//    /**
+//     * bind socket to port and address
+//     */
+//
+//    bind(sock, (struct sockaddr*)&serverAddr, size(struct sockaddr));
+//}
+
+Coord packetRec(World* w){
+    Coord c = Coord(-.75,-3);
+    Agent a = Agent(c, 135);
+    bool fly = w->canFly(a);
+    std::cout << "Can fly?: " << fly << std::endl;
+
+    if (fly) {
+        Coord react = w->nearBound(a);
+        Coord destination;
+        std::cout << "Continue?: " << react.null << std::endl;
+        if (!react.null) {
+            destination = w->makeNew(a, react);
+            Agent checkA = Agent(destination, a.loc.bearingTo(destination));
+            if (w->canFly(checkA)) {
+                Coord react2 = w->nearBound(checkA);
+                if (!react2.null) {
+                    destination = w->makeNew(checkA, react2);
+                    checkA = Agent(destination, checkA.loc.bearingTo(destination));
+                    if (!w->canFly(checkA)) {
+                        destination = a.loc;
+                    } //if no fly zone, send to original location
+                    else {
+                        react2 = w->nearBound(checkA);
+                        if (!react2.null) {
+                            destination = a.loc;
+                        } // if still near bound, send original location
+                    } //check 2nd poss. destination
+                } // check possible destination near bound
+            } // check possible location can fly
+            else {
+                destination = a.loc;
+            } //check if poss. location no fly
+            std:
+            cout << "Location: " << destination.latitude << "  " << destination.longitude << std::endl;
+        }
+
+        return destination;
+    }
+    return false;
 }
 
-
-
-
 int main(){
-    setup();
-    Coord c = Coord(43.00086811, -78.781);
-    Agent a = Agent(c, 170);
-    bool fly = w->canFly(a);
-    Coord react = w->nearBound(a);
-
-    std::cout << fly << std::endl;
-    Coord destination;
-    if (!react.null){
-        destination = w->makeNew(a, react);
-        Agent checkA = Agent(destination,a.loc.bearingTo(destination));
-        if (w->canFly(checkA)){
-            Coord react2 = w->nearBound(checkA);
-            if (!react2.null) {
-                destination = w->makeNew(checkA, react2);
-                checkA = Agent(destination, checkA.loc.bearingTo(destination));
-                if (!w->canFly(checkA)){
-                    destination = a.loc;
-                } //if no fly zone, send to original location
-                else{
-                    react2 = w->nearBound(checkA);
-                    if(!react2.null){
-                        destination = a.loc;
-                    } // if still near bound, send original location
-                } //check 2nd poss. destination
-            } // check possible destination near bound
-        } // check possible location can fly
-        else {
-            destination = a.loc;
-        } //check if poss. location no fly
-        std:cout << destination.latitude << "  " << destination.longitude << std::endl;
-    }
-
-    std::cout << react.null << std::endl;
+    World* w = setupDB();
+    packetRec(w);
+//    setupSOCKET();
+//    while(true) {
+//        int buffer, sock;//
+//        bzero(buffer, 1);//what is this
+//        sockaddr_in clientAddr;
+//        socklen_t sin_size = size(
+//        struct sockaddr_in);
+//        int clientSock = accept(sock, (struct sockaddr *) &clientAddr, &sin_size);
+//        while (true) {
+//            //receive packet
+//            int n = read(clientSock, buffer, 500) //why 500?
+//            cout << n << endl << buffer << endl;
+//        }
+//    }
 
     return 0;
 }

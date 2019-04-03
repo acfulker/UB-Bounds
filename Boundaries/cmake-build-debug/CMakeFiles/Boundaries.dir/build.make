@@ -70,22 +70,9 @@ CMakeFiles/Boundaries.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Boundaries.dir/main.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/annasholk/CLionProjects/UB-Bounds/Boundaries/main.cpp -o CMakeFiles/Boundaries.dir/main.cpp.s
 
-CMakeFiles/Boundaries.dir/Box.cpp.o: CMakeFiles/Boundaries.dir/flags.make
-CMakeFiles/Boundaries.dir/Box.cpp.o: ../Box.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Boundaries.dir/Box.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Boundaries.dir/Box.cpp.o -c /Users/annasholk/CLionProjects/UB-Bounds/Boundaries/Box.cpp
-
-CMakeFiles/Boundaries.dir/Box.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Boundaries.dir/Box.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/annasholk/CLionProjects/UB-Bounds/Boundaries/Box.cpp > CMakeFiles/Boundaries.dir/Box.cpp.i
-
-CMakeFiles/Boundaries.dir/Box.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Boundaries.dir/Box.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/annasholk/CLionProjects/UB-Bounds/Boundaries/Box.cpp -o CMakeFiles/Boundaries.dir/Box.cpp.s
-
 CMakeFiles/Boundaries.dir/World.cpp.o: CMakeFiles/Boundaries.dir/flags.make
 CMakeFiles/Boundaries.dir/World.cpp.o: ../World.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Boundaries.dir/World.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Boundaries.dir/World.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Boundaries.dir/World.cpp.o -c /Users/annasholk/CLionProjects/UB-Bounds/Boundaries/World.cpp
 
 CMakeFiles/Boundaries.dir/World.cpp.i: cmake_force
@@ -98,7 +85,7 @@ CMakeFiles/Boundaries.dir/World.cpp.s: cmake_force
 
 CMakeFiles/Boundaries.dir/Agent.cpp.o: CMakeFiles/Boundaries.dir/flags.make
 CMakeFiles/Boundaries.dir/Agent.cpp.o: ../Agent.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Boundaries.dir/Agent.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Boundaries.dir/Agent.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Boundaries.dir/Agent.cpp.o -c /Users/annasholk/CLionProjects/UB-Bounds/Boundaries/Agent.cpp
 
 CMakeFiles/Boundaries.dir/Agent.cpp.i: cmake_force
@@ -111,7 +98,7 @@ CMakeFiles/Boundaries.dir/Agent.cpp.s: cmake_force
 
 CMakeFiles/Boundaries.dir/Coord.cpp.o: CMakeFiles/Boundaries.dir/flags.make
 CMakeFiles/Boundaries.dir/Coord.cpp.o: ../Coord.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Boundaries.dir/Coord.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Boundaries.dir/Coord.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Boundaries.dir/Coord.cpp.o -c /Users/annasholk/CLionProjects/UB-Bounds/Boundaries/Coord.cpp
 
 CMakeFiles/Boundaries.dir/Coord.cpp.i: cmake_force
@@ -124,7 +111,7 @@ CMakeFiles/Boundaries.dir/Coord.cpp.s: cmake_force
 
 CMakeFiles/Boundaries.dir/Zone.cpp.o: CMakeFiles/Boundaries.dir/flags.make
 CMakeFiles/Boundaries.dir/Zone.cpp.o: ../Zone.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Boundaries.dir/Zone.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Boundaries.dir/Zone.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Boundaries.dir/Zone.cpp.o -c /Users/annasholk/CLionProjects/UB-Bounds/Boundaries/Zone.cpp
 
 CMakeFiles/Boundaries.dir/Zone.cpp.i: cmake_force
@@ -137,7 +124,7 @@ CMakeFiles/Boundaries.dir/Zone.cpp.s: cmake_force
 
 CMakeFiles/Boundaries.dir/Line.cpp.o: CMakeFiles/Boundaries.dir/flags.make
 CMakeFiles/Boundaries.dir/Line.cpp.o: ../Line.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Boundaries.dir/Line.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Boundaries.dir/Line.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Boundaries.dir/Line.cpp.o -c /Users/annasholk/CLionProjects/UB-Bounds/Boundaries/Line.cpp
 
 CMakeFiles/Boundaries.dir/Line.cpp.i: cmake_force
@@ -151,7 +138,6 @@ CMakeFiles/Boundaries.dir/Line.cpp.s: cmake_force
 # Object files for target Boundaries
 Boundaries_OBJECTS = \
 "CMakeFiles/Boundaries.dir/main.cpp.o" \
-"CMakeFiles/Boundaries.dir/Box.cpp.o" \
 "CMakeFiles/Boundaries.dir/World.cpp.o" \
 "CMakeFiles/Boundaries.dir/Agent.cpp.o" \
 "CMakeFiles/Boundaries.dir/Coord.cpp.o" \
@@ -162,7 +148,6 @@ Boundaries_OBJECTS = \
 Boundaries_EXTERNAL_OBJECTS =
 
 Boundaries: CMakeFiles/Boundaries.dir/main.cpp.o
-Boundaries: CMakeFiles/Boundaries.dir/Box.cpp.o
 Boundaries: CMakeFiles/Boundaries.dir/World.cpp.o
 Boundaries: CMakeFiles/Boundaries.dir/Agent.cpp.o
 Boundaries: CMakeFiles/Boundaries.dir/Coord.cpp.o
@@ -170,7 +155,7 @@ Boundaries: CMakeFiles/Boundaries.dir/Zone.cpp.o
 Boundaries: CMakeFiles/Boundaries.dir/Line.cpp.o
 Boundaries: CMakeFiles/Boundaries.dir/build.make
 Boundaries: CMakeFiles/Boundaries.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable Boundaries"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/annasholk/CLionProjects/UB-Bounds/Boundaries/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable Boundaries"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Boundaries.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

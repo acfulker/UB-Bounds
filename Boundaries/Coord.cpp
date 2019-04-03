@@ -27,7 +27,7 @@ double Coord::distanceTo(Coord &other){
     
     c=sqrt(tempx*tempx + tempy*tempy);
     
-    dist = c*(100/.0003);
+    dist = c; //*(100/0.0003)
     return dist;
 }
 
@@ -45,7 +45,7 @@ Coord Coord::midpoint(Coord &other){
 /**
  *
  * @param other
- * @return bearing to coordinate
+ * @return bearing to coordinate with respect to north
  * Used in makeNew function
  */
 double Coord::bearingTo(Coord &other){
@@ -65,7 +65,7 @@ double Coord::bearingTo(Coord &other){
  * @return point at bearing and distance
  */
 Coord Coord::pointAt(double dist, double bearing){
-    dist = dist*(.0003/100);
+    //dist = dist*(.0003/100);
     double ref = fmod(bearing, 90.0);
     Coord p(*this);
     //dist to degrees units

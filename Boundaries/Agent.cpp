@@ -23,7 +23,7 @@ Agent::Agent(Coord &coord, double bearing) {
  * @return the closest point on a line to the drone (loc)
 **/
 Coord Agent::nearestPoint2Line(Line l){
-    double threshold = 5;
+    double threshold = 0.05;
     Coord p1 = l.p1, p2 = l.p2;
     double d1 = loc.distanceTo(p1), d2 = loc.distanceTo(p2);
     double diff = abs(d1-d2);

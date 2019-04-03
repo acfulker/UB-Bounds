@@ -6,12 +6,6 @@ CMakeFiles/Boundaries.dir/Agent.cpp.o: ../Agent.h
 CMakeFiles/Boundaries.dir/Agent.cpp.o: ../Coord.h
 CMakeFiles/Boundaries.dir/Agent.cpp.o: ../Line.h
 
-CMakeFiles/Boundaries.dir/Box.cpp.o: ../Agent.h
-CMakeFiles/Boundaries.dir/Box.cpp.o: ../Box.cpp
-CMakeFiles/Boundaries.dir/Box.cpp.o: ../Box.h
-CMakeFiles/Boundaries.dir/Box.cpp.o: ../Coord.h
-CMakeFiles/Boundaries.dir/Box.cpp.o: ../Line.h
-
 CMakeFiles/Boundaries.dir/Coord.cpp.o: ../Coord.cpp
 CMakeFiles/Boundaries.dir/Coord.cpp.o: ../Coord.h
 

@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Boundaries.dir/main.cpp.o"
-  "CMakeFiles/Boundaries.dir/Box.cpp.o"
   "CMakeFiles/Boundaries.dir/World.cpp.o"
   "CMakeFiles/Boundaries.dir/Agent.cpp.o"
   "CMakeFiles/Boundaries.dir/Coord.cpp.o"

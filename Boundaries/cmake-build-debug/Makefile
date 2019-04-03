@@ -610,33 +610,6 @@ Agent.cpp.s:
 	$(MAKE) -f CMakeFiles/Boundaries.dir/build.make CMakeFiles/Boundaries.dir/Agent.cpp.s
 .PHONY : Agent.cpp.s
 
-Box.o: Box.cpp.o
-
-.PHONY : Box.o
-
-# target to build an object file
-Box.cpp.o:
-	$(MAKE) -f CMakeFiles/Boundaries.dir/build.make CMakeFiles/Boundaries.dir/Box.cpp.o
-.PHONY : Box.cpp.o
-
-Box.i: Box.cpp.i
-
-.PHONY : Box.i
-
-# target to preprocess a source file
-Box.cpp.i:
-	$(MAKE) -f CMakeFiles/Boundaries.dir/build.make CMakeFiles/Boundaries.dir/Box.cpp.i
-.PHONY : Box.cpp.i
-
-Box.s: Box.cpp.s
-
-.PHONY : Box.s
-
-# target to generate assembly for a file
-Box.cpp.s:
-	$(MAKE) -f CMakeFiles/Boundaries.dir/build.make CMakeFiles/Boundaries.dir/Box.cpp.s
-.PHONY : Box.cpp.s
-
 Coord.o: Coord.cpp.o
 
 .PHONY : Coord.o
@@ -874,9 +847,6 @@ help:
 	@echo "... Agent.o"
 	@echo "... Agent.i"
 	@echo "... Agent.s"
-	@echo "... Box.o"
-	@echo "... Box.i"
-	@echo "... Box.s"
 	@echo "... Coord.o"
 	@echo "... Coord.i"
 	@echo "... Coord.s"

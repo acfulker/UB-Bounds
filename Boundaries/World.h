@@ -12,7 +12,7 @@
 
 class World {
 private:
-    const double THRESHOLD = 100;
+    const double THRESHOLD = 0.5;
 
 public:
 

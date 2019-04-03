@@ -1,0 +1,46 @@
+<controlled_region>
+    <sector name="1" north="13" south="-13" east="8" west="-7">
+        <zone name="one" size="6">
+            <point lat="13" long="-7.000000" />
+            <point lat="13" long="-2.000000" />
+            <point lat="10.0" long="-2.0" />
+            <point lat="10.0" long="-6.0" />
+            <point lat="6.0" long="-6.0" />
+            <point lat="6.0" long="-7.0" />
+        </zone>
+        <zone name="two" size="6">
+            <point lat="8.000000" long="2.000000" />
+            <point lat="8.0" long="5.0" />
+            <point lat="2.0" long="5.0" />
+            <point lat="2.0" long="1.0" />
+            <point lat="5.0" long="1.0" />
+            <point lat="5.0" long="2.0" />
+        </zone>
+        <zone name="three" size="4">
+            <point lat="6.000000" long="6.000000" />
+            <point lat="6.0" long="8.0" />
+            <point lat="-5.0" long="8.0" />
+            <point lat="-5.0" long="6.0" />
+        </zone>
+        <zone name="four" size="4">
+            <point lat="-1.000000" long="-6.000000" />
+            <point lat="-1.000000" long="0.000000" />
+            <point lat="-5.000000" long="0.000000" />
+            <point lat="-5.000000" long="-6.000000" />
+        </zone>
+        <zone name="five" size="4">
+            <point lat="-5.0" long="-5.0" />
+            <point lat="-6.0" long="-2.0" />
+            <point lat="-8.0" long="-2.0" />
+            <point lat="-9.0" long="-5.0" />
+        </zone>
+        <zone name="six" size="5">
+            <point lat="-7.0" long="6.0" />
+            <point lat="-7.0" long="8.0" />
+            <point lat="-13.0" long="8.0" />
+            <point lat="-13.0" long="0.0" />
+            <point lat="-12.0" long="0.0" />
+        </zone>
+    </sector>
+</controlled_region>
+
