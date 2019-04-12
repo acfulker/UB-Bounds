@@ -12,14 +12,14 @@
 #include <sys/types.h>
 #include <vector>
 #include <stdio.h>
-//#include <sys/socket.h>
-//#include <netinet/in.h>
-//#include <netdb.h>
-//#include <unistd.h>
-//#include <arpa/inet.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <netdb.h>
+#include <unistd.h>
+#include <arpa/inet.h>
 
 World* setupDB();
-//int setupSOCKET();
+//int setupSock();
 Coord packetRec(World* w);
 #if defined( _MSC_VER )
 #if !defined( _CRT_SECURE_NO_WARNINGS )
@@ -100,19 +100,18 @@ World* setupDB() {
     //doc.Print();
     return w;
 }
-//
-//int setupSOCKET(){
-//    int sock = socket(AF_INET, SOCK_STREAM, 0); //AF_INET for IPv4, SOCK_STREAM for TCP, 0 for any protocol
-//    sockaddr_in serverAddr;
-//    serverAddr.sin_family = AF_INET;
-//    serverAddr.sin_port = SERVER_PORT;
-//    serverAddr.sin_addr.s_addr = INADDR_ANY;
-//    /**
-//     * bind socket to port and address
-//     */
-//
-//    bind(sock, (struct sockaddr*)&serverAddr, size(struct sockaddr));
-//}
+
+int setupSock(){
+    int sock = socket(AF_INET, SOCK_STREAM, 0); //domain IPv4, type, protocol
+    sockaddr_in serverAddr;
+    serverAddr.sin_family = AF_INET;
+    serverAddr.sin_port = htons(3306);
+    serverAddr.sin_addr.s_addr = htonl(INADDR_ANY);
+    //bind socket to port and address
+    bind(sock,(struct sockaddr*)&serverAddr, sizeof(struct sockaddr));
+    std::cout << serverAddr.sin_addr.s_addr << std::endl;
+    return sock;
+}
 
 Coord packetRec(World* w){
     Coord c = Coord(-.75,-3);
@@ -157,21 +156,22 @@ Coord packetRec(World* w){
 
 int main(){
     World* w = setupDB();
-    packetRec(w);
-//    setupSOCKET();
-//    while(true) {
-//        int buffer, sock;//
-//        bzero(buffer, 1);//what is this
-//        sockaddr_in clientAddr;
-//        socklen_t sin_size = size(
-//        struct sockaddr_in);
-//        int clientSock = accept(sock, (struct sockaddr *) &clientAddr, &sin_size);
-//        while (true) {
-//            //receive packet
-//            int n = read(clientSock, buffer, 500) //why 500?
-//            cout << n << endl << buffer << endl;
-//        }
-//    }
+//    Coord dest = packetRec(w);
+    int sock = setupSock();
+    listen(sock,10); //socket,backlog
+    char buffer[256];
+    bzero(buffer,256);
+    sockaddr_in clientAddr;
+    socklen_t sin_size = sizeof(struct sockaddr_in);
+    while(true) {
+        int clientSock = accept(sock,(struct sockaddr*)&clientAddr, &sin_size);
+        int n = read(clientSock, buffer, 500);
+        cout << n << endl << buffer << endl;
+        int w = write(clientSock,buffer,strlen(buffer)+1);
+        bzero(buffer,256);
+
+    }
+
 
     return 0;
 }
