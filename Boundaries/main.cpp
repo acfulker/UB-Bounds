@@ -17,6 +17,9 @@
 #include <netdb.h>
 #include <unistd.h>
 #include <arpa/inet.h>
+#include "json.hpp"
+#include <string>
+#include <string.h>
 
 World* setupDB();
 //int setupSock();
@@ -27,6 +30,9 @@ Coord packetRec(World* w);
 	#endif
 #endif
 
+
+
+using json = nlohmann::json;
 using namespace tinyxml2;
 using namespace std;
 
@@ -167,7 +173,11 @@ int main(){
         int clientSock = accept(sock,(struct sockaddr*)&clientAddr, &sin_size);
         int n = read(clientSock, buffer, 500);
         cout << n << endl << buffer << endl;
-        int w = write(clientSock,buffer,strlen(buffer)+1);
+        auto packet = json::parse(buffer);
+        cout << packet["pdu"] << endl;
+        auto pdu = packet["pdu"].get<std::string>();
+
+//        int w = write(clientSock,strcpy(buffer, packet["pdu"].get<std::string>()),strlen(buffer)+1);
         bzero(buffer,256);
 
     }
