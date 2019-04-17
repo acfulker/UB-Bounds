@@ -22,8 +22,10 @@
 #include <string.h>
 
 World* setupDB();
-//int setupSock();
+int setupSock();
 Coord packetRec(World* w);
+Agent* depacketize(std::string pdu);
+double toDouble(std::string str);
 #if defined( _MSC_VER )
 #if !defined( _CRT_SECURE_NO_WARNINGS )
 		#define _CRT_SECURE_NO_WARNINGS		// This test file is not intended to be secure.
@@ -160,6 +162,17 @@ Coord packetRec(World* w){
     return false;
 }
 
+Agent* depacketize(std::string pdu){
+    std::string inlat = pdu.substr(0,10); //set input latitude to first 10 payload values
+    std::string inlon = pdu.substr(10,10); //set input longitude to second set from payload
+    std::string inbear = pdu.substr(20,10); //set input bearing to last payload values
+    return Agent(Coord(toDouble(inlat), toDouble(inlon)), toDouble(inbear));
+}
+
+double toDouble(std::string str){
+
+}
+
 int main(){
     World* w = setupDB();
 //    Coord dest = packetRec(w);
@@ -175,8 +188,10 @@ int main(){
         cout << n << endl << buffer << endl;
         auto packet = json::parse(buffer);
         cout << packet["pdu"] << endl;
-        auto pdu = packet["pdu"].get<std::string>();
+//        Agent a = depacketize(packet["pdu"].get<std::string>());
+        std::string lat = packet["pdu"].get<std::string>().substr(0,10);
 
+        cout << inlat << endl << inlon << endl << inbear << endl;
 //        int w = write(clientSock,strcpy(buffer, packet["pdu"].get<std::string>()),strlen(buffer)+1);
         bzero(buffer,256);
 
