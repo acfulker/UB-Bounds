@@ -1,9 +1,4 @@
 #include <iostream>
-#include "Agent.h"
-#include "World.h"
-#include "Zone.h"
-#include "tinyxml2.h"
-#include "tinyxml2.cpp"
 #include <cerrno>
 #include <cstdlib>
 #include <cstring>
@@ -17,13 +12,21 @@
 #include <netdb.h>
 #include <unistd.h>
 #include <arpa/inet.h>
-#include "json.hpp"
 #include <string>
 #include <string.h>
+#include <fstream>
+#include <sstream>
+#include <stdlib.h>
+#include "Agent.h"
+#include "World.h"
+#include "Zone.h"
+#include "json.hpp"
+#include "tinyxml2.h"
+#include "tinyxml2.cpp"
 
 World* setupDB();
 int setupSock();
-Coord packetRec(World* w);
+Coord packetRec(World* w, Agent* a);
 Agent* depacketize(std::string pdu);
 double toDouble(std::string str);
 #if defined( _MSC_VER )
@@ -32,18 +35,16 @@ double toDouble(std::string str);
 	#endif
 #endif
 
-
-
 using json = nlohmann::json;
 using namespace tinyxml2;
 using namespace std;
 
-//World *w;
+World *w;
 
 World* setupDB() {
     XMLDocument doc;
     doc.LoadFile("testing.xml");
-    
+
     XMLNode * region = doc.FirstChild();
     if (region == nullptr) throw XML_ERROR_FILE_READ_ERROR;
     XMLElement * sect = region->FirstChildElement("sector");
@@ -56,7 +57,7 @@ World* setupDB() {
     std::vector<Zone> sectList;//list of sectors as Zone objects
     while(sect != nullptr){//sector
         std::vector<Zone> zoneList;//list of zone objects in this sector
-        
+
         //build this sector's Zone
         std::vector<double> sLatitudes(4), sLongitudes(4);
         double n, s, e, w;
@@ -74,8 +75,8 @@ World* setupDB() {
         sLongitudes[3]=w;
         Zone *z = new Zone(sLatitudes, sLongitudes, 4);
         sectList.push_back(*z);
-        
-        
+
+
         while(zone != nullptr){//zone
             int points=zone->IntAttribute("size");
             std::vector<double> latitudes(points), longitudes(points);
@@ -87,7 +88,7 @@ World* setupDB() {
                 i++;
                 point=point->NextSiblingElement("point");
             }
-            
+
             Zone *z = new Zone(latitudes, longitudes, points);
             z->edgeList();
             zoneList.push_back(*z);
@@ -95,7 +96,7 @@ World* setupDB() {
             if(zone == nullptr) break;//check if last zone
             point = zone->FirstChildElement("point");
             if (point == nullptr) throw XML_ERROR_PARSING_ELEMENT;
-            
+
         }
         wV.push_back(zoneList);
         sect=sect->NextSiblingElement("sector");
@@ -103,7 +104,7 @@ World* setupDB() {
         zone = sect->FirstChildElement("zone");
         if (zone == nullptr) throw XML_ERROR_PARSING_ELEMENT;
     }
-    
+
     World* w = new World(wV, sectList);
     //doc.Print();
     return w;
@@ -121,9 +122,7 @@ int setupSock(){
     return sock;
 }
 
-Coord packetRec(World* w){
-    Coord c = Coord(-.75,-3);
-    Agent a = Agent(c, 135);
+Coord packetRec(World* w, Agent* a){
     bool fly = w->canFly(a);
     std::cout << "Can fly?: " << fly << std::endl;
 
@@ -166,16 +165,32 @@ Agent* depacketize(std::string pdu){
     std::string inlat = pdu.substr(0,10); //set input latitude to first 10 payload values
     std::string inlon = pdu.substr(10,10); //set input longitude to second set from payload
     std::string inbear = pdu.substr(20,10); //set input bearing to last payload values
-    return Agent(Coord(toDouble(inlat), toDouble(inlon)), toDouble(inbear));
+    Coord loc = Coord(toDouble(inlat), toDouble(inlon));
+    Agent a = Agent(loc, toDouble(inbear));
+    return &a;
 }
 
 double toDouble(std::string str){
-
+    int len = str.length();
+    std::string newString;
+    for(int i=0; i< len; i+=2)
+    {
+        string byte = str.substr(i,2);
+        char chr = (char) (int)strtol(byte.c_str(), nullptr, 16);
+        newString.push_back(chr);
+    }
+    double d = 0.0;
+    ::sscanf(newString.c_str(), "%lA", &d);
+    return d;
 }
 
 int main(){
+//    string hexstr = "2d34382e3735313233";
+//    char str[hexstr.size()+1];
+//    strcpy(str,hexstr.c_str());
+//    cout << hexstr << endl << toDouble(hexstr) << endl;
     World* w = setupDB();
-//    Coord dest = packetRec(w);
+    Coord dest = packetRec(w);
     int sock = setupSock();
     listen(sock,10); //socket,backlog
     char buffer[256];
@@ -188,15 +203,12 @@ int main(){
         cout << n << endl << buffer << endl;
         auto packet = json::parse(buffer);
         cout << packet["pdu"] << endl;
-//        Agent a = depacketize(packet["pdu"].get<std::string>());
-        std::string lat = packet["pdu"].get<std::string>().substr(0,10);
+        Agent a = depacketize(packet["pdu"].get<std::string>());
 
         cout << inlat << endl << inlon << endl << inbear << endl;
-//        int w = write(clientSock,strcpy(buffer, packet["pdu"].get<std::string>()),strlen(buffer)+1);
+        int w = write(clientSock,strcpy(buffer, packet["pdu"].get<std::string>()),strlen(buffer)+1);
         bzero(buffer,256);
-
     }
-
-
     return 0;
+
 }
