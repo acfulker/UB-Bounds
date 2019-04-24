@@ -27,7 +27,7 @@
 World* setupDB();
 int setupSock();
 Coord packetRec(World* w, Agent* a);
-Agent* depacketize(std::string pdu);
+Agent depacketize(std::string pdu);
 double toDouble(std::string str);
 #if defined( _MSC_VER )
 #if !defined( _CRT_SECURE_NO_WARNINGS )
@@ -123,51 +123,53 @@ int setupSock(){
 }
 
 Coord packetRec(World* w, Agent* a){
-    bool fly = w->canFly(a);
+    bool fly = w->canFly(*a);
     std::cout << "Can fly?: " << fly << std::endl;
 
     if (fly) {
-        Coord react = w->nearBound(a);
+        Coord react = w->nearBound(*a);
         Coord destination;
         std::cout << "Continue?: " << react.null << std::endl;
         if (!react.null) {
-            destination = w->makeNew(a, react);
-            Agent checkA = Agent(destination, a.loc.bearingTo(destination));
+            destination = w->makeNew(*a, react);
+            Agent checkA = Agent(destination, a->loc.bearingTo(destination));
             if (w->canFly(checkA)) {
                 Coord react2 = w->nearBound(checkA);
                 if (!react2.null) {
                     destination = w->makeNew(checkA, react2);
                     checkA = Agent(destination, checkA.loc.bearingTo(destination));
                     if (!w->canFly(checkA)) {
-                        destination = a.loc;
+                        destination = a->loc;
                     } //if no fly zone, send to original location
                     else {
                         react2 = w->nearBound(checkA);
                         if (!react2.null) {
-                            destination = a.loc;
+                            destination = a->loc;
                         } // if still near bound, send original location
                     } //check 2nd poss. destination
                 } // check possible destination near bound
             } // check possible location can fly
             else {
-                destination = a.loc;
+                destination = a->loc;
             } //check if poss. location no fly
-            std:
-            cout << "Location: " << destination.latitude << "  " << destination.longitude << std::endl;
+            std::cout << "Location: " << destination.latitude << "  " << destination.longitude << std::endl;
+        }
+        else {
+            return react;
         }
 
         return destination;
     }
-    return false;
+    return Coord(false);
 }
 
-Agent* depacketize(std::string pdu){
+Agent depacketize(std::string pdu){
     std::string inlat = pdu.substr(0,10); //set input latitude to first 10 payload values
     std::string inlon = pdu.substr(10,10); //set input longitude to second set from payload
-    std::string inbear = pdu.substr(20,10); //set input bearing to last payload values
+    std::string inbear = pdu.substr(20,6); //set input bearing to last payload values
     Coord loc = Coord(toDouble(inlat), toDouble(inlon));
     Agent a = Agent(loc, toDouble(inbear));
-    return &a;
+    return a;
 }
 
 double toDouble(std::string str){
@@ -190,7 +192,7 @@ int main(){
 //    strcpy(str,hexstr.c_str());
 //    cout << hexstr << endl << toDouble(hexstr) << endl;
     World* w = setupDB();
-    Coord dest = packetRec(w);
+//    Coord dest = packetRec(w);
     int sock = setupSock();
     listen(sock,10); //socket,backlog
     char buffer[256];
@@ -200,13 +202,13 @@ int main(){
     while(true) {
         int clientSock = accept(sock,(struct sockaddr*)&clientAddr, &sin_size);
         int n = read(clientSock, buffer, 500);
-        cout << n << endl << buffer << endl;
+//        cout << n << endl << buffer << endl;
         auto packet = json::parse(buffer);
         cout << packet["pdu"] << endl;
         Agent a = depacketize(packet["pdu"].get<std::string>());
-
-        cout << inlat << endl << inlon << endl << inbear << endl;
-        int w = write(clientSock,strcpy(buffer, packet["pdu"].get<std::string>()),strlen(buffer)+1);
+        cout << a.lat << endl << a.lon << endl;
+        Coord dest = packetRec(w, &a);
+//        int w = write(clientSock,strcpy(buffer, packet["pdu"].get<std::string>()),strlen(buffer)+1);
         bzero(buffer,256);
     }
     return 0;

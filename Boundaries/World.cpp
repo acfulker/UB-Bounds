@@ -71,6 +71,11 @@ Coord World::nearBound(Agent &a){
             }//end if
         }//end for m
     }//end for i
+    double bearingToBound = a.loc.bearingTo(nearest);
+    double leftRight = angleBetween(bearingToBound,a.bear);
+    if (abs(leftRight)>=85) {
+        return Coord(true);
+    }
     if (shortest <= THRESHOLD) {
         return nearest;
     }
@@ -87,7 +92,7 @@ Coord World::makeNew(Agent &a, Coord nearest){
     double dist = a.loc.distanceTo(nearest);
     double bearingToBound = a.loc.bearingTo(nearest);
     double leftRight = angleBetween(bearingToBound,a.bear);
-    if (leftRight==0) {
+    if (abs(leftRight)<=3) {
         return a.loc;
     }
     double theta = abs(leftRight);
