@@ -1,16 +1,282 @@
 <controlled_region>
-    <sector name="1" north="43.0018" south="42.9965" east="-78.7733" west="-78.7853">
+    <sector name="1" north="43.005400" south="42.996000" east="-78.785400" west="-78.797200">
         <zone name="Alumni Arena" size="4">
-            <point lat="43.000868" long="e" />
-            <point lat="42.999495" long="-78.780428" />
-            <point lat="42.999495" long="-78.782037" />
-            <point lat="43.000868" long="-78.782037" />
+            <point lat="43.000908" long="-78.780660" />
+            <point lat="43.000605" long="-78.780660" />
+            <point lat="43.000605" long="-78.780374" />
+            <point lat="42.999769" long="-78.780374" />
+            <point lat="42.999764" long="-78.780708" />
+            <point lat="42.999444" long="-78.780708" />
+            <point lat="42.999444" long="-78.780708" />
+            <point lat="42.999786" long="-78.781789" />
+            <point lat="42.999786" long="-78.782055" />
+            <point lat="43.000908" long="-78.782055" />
         </zone>
-        <zone name="Stadium" size="4">
-            <point lat="43.000201" long="-78.776318" />
-            <point lat="42.997965" long="-78.776318" />
-            <point lat="42.997965" long="-78.778636" />
-            <point lat="43.000201" long="-78.778636" />
+        <zone name="Stadium" size="10">
+            <point lat="42.999885" long="-78.776340" />
+            <point lat="42.998532" long="-78.776340" />
+            <point lat="42.998145" long="-78.776708" />
+            <point lat="42.997997" long="-78.776952" />
+            <point lat="42.997997" long="-78.778074" />
+            <point lat="42.998150" long="-78.778319" />
+            <point lat="42.998487" long="-78.778681" />
+            <point lat="42.999690" long="-78.778681" />
+            <point lat="43.000191" long="-78.778110" />
+            <point lat="43.000191" long="-78.776785" />
+        </zone>
+        <zone name="Police Station" size="4">
+            <point lat="42.998745" long="-78.780535" />
+            <point lat="42.998397" long="-78.780520" />
+            <point lat="42.998374" long="-78.780908" />
+            <point lat="42.999732" long="-78.780908" />
+        </zone>
+        <zone name="CFA" size="8">
+            <point lat="43.001421" long="-78.782198" />
+            <point lat="43.000509" long="-78.782198" />
+            <point lat="43.000509" long="-78.783615" />
+            <point lat="43.000717" long="-78.783615" />
+            <point lat="43.000717" long="-78.783465" />
+            <point lat="43.001402" long="-78.783465" />
+            <point lat="43.001553" long="-78.783130" />
+            <point lat="43.001553" long="-78.783031" />
+        </zone>
+        <zone name="Slee" size="4">
+            <point lat="43.000595" long="-78.783714" />
+            <point lat="43.000311" long="-78.783714" />
+            <point lat="43.000311" long="-78.784278" />
+            <point lat="43.000595" long="-78.784278" />
+        </zone>
+        <zone name="Clemons" size="8">
+            <point lat="43.000639" long="-78.784912" />
+            <point lat="43.000562" long="-78.784912" />
+            <point lat="43.000562" long="-78.784685" />
+            <point lat="43.000425" long="-78.784685" />
+            <point lat="43.000425" long="-78.784912" />
+            <point lat="43.000074" long="-78.784912" />
+            <point lat="43.000074" long="-78.785138" />
+            <point lat="43.000639" long="-78.785138" />
+        </zone>
+        <zone name="Baird" size="4">
+            <point lat="43.000157" long="-78.783936" />
+            <point lat="42.999925" long="-78.783936" />
+            <point lat="42.999925" long="-78.784912" />
+            <point lat="43.000216" long="-78.784912" />
+        </zone>
+        <zone name="Commons" size="7">
+            <point lat="43.002243" long="-78.784289" />
+            <point lat="43.001943" long="-78.784148" />
+            <point lat="43.001755" long="-78.784270" />
+            <point lat="43.001485" long="-78.784627" />
+            <point lat="43.001485" long="-78.785305" />
+            <point lat="43.001757" long="-78.785674" />
+            <point lat="43.002232" long="-78.785510" />
+        </zone>
+        <zone name="Bookstore" size="4">
+            <point lat="43.003044" long="-78.784490" />
+            <point lat="43.002383" long="-78.784490" />
+            <point lat="43.002383" long="-78.784836" />
+            <point lat="43.002902" long="-78.784836" />
+            <point lat="43.003044" long="-78.784637" />
+        </zone>
+        <zone name="Child Care Center" size="8">
+            <point lat="43.002538" long="-78.779900" />
+            <point lat="43.002382" long="-78.779571" />
+            <point lat="43.002276" long="-78.779673" />
+            <point lat="43.002199" long="-78.779517" />
+            <point lat="43.002030" long="-78.779690" />
+            <point lat="43.002137" long="-78.779922" />
+            <point lat="43.002040" long="-78.780002" />
+            <point lat="43.002157" long="-78.780270" />
+        </zone>
+    </sector>
+    <sector name="2" north="43.005400" south="42.99600" east="-78.773200" west="-78.785400">
+        <zone name="Commons" size="7">
+            <point lat="43.002243" long="-78.784289" />
+            <point lat="43.001943" long="-78.784148" />
+            <point lat="43.001755" long="-78.784270" />
+            <point lat="43.001485" long="-78.784627" />
+            <point lat="43.001485" long="-78.785305" />
+            <point lat="43.001757" long="-78.785674" />
+            <point lat="43.002232" long="-78.785510" />
+        </zone>
+        <zone name="Furnas" size="6">
+            <point lat="43.002019" long="-78.786823" />
+            <point lat="43.001956" long="-78.786823" />
+            <point lat="43.001956" long="-78.786745" />
+            <point lat="43.001842" long="-78.786745" />
+            <point lat="43.001842" long="-78.787449" />
+            <point lat="43.002019" long="-78.787449" />
+        </zone>
+        <zone name="Jarvis" size="4">
+            <point lat="43.000157" long="-78.783936" />
+            <point lat="42.999925" long="-78.783936" />
+            <point lat="42.999925" long="-78.784912" />
+            <point lat="43.000216" long="-78.784912" />
+        </zone>
+        <zone name="Davis" size="8">
+            <point lat="43.002951" long="-78.786795" />
+            <point lat="43.002527" long="-78.786795" />
+            <point lat="43.002527" long="-78.787253" />
+            <point lat="43.002629" long="-78.787253" />
+            <point lat="43.002629" long="-78.787534" />
+            <point lat="43.002296" long="-78.787539" />
+            <point lat="43.002346" long="-78.787808" />
+            <point lat="43.002997" long="-78.787808" />
+        </zone>
+        <zone name="Ketter" size="4">
+            <point lat="43.002891" long="-78.787851" />
+            <point lat="43.002157" long="-78.787851" />
+            <point lat="43.002157" long="-78.788496" />
+            <point lat="43.002891" long="-78.788496" />
+        </zone>
+        <zone name="Governors" size="4">
+            <point lat="43.002751" long="-78.793891" />
+            <point lat="43.001600" long="-78.793891" />
+            <point lat="43.001600" long="-78.795430" />
+            <point lat="43.002751" long="-78.795430" />
+        </zone>
+        <zone name="Math Bldg" size="6">
+            <point lat="43.001351" long="-78.792472" />
+            <point lat="43.001083" long="-78.792472" />
+            <point lat="43.001083" long="-78.793085" />
+            <point lat="43.001298" long="-78.793085" />
+            <point lat="43.001298" long="-78.792648" />
+            <point lat="43.001351" long="-78.792648" />
+        </zone>
+        <zone name="Fronczak" size="6">
+            <point lat="43.001390" long="-78.790270" />
+            <point lat="43.001106" long="-78.790270" />
+            <point lat="43.001106" long="-78.792225" />
+            <point lat="43.001390" long="-78.792225" />
+        </zone>
+        <zone name="NSC" size="4">
+            <point lat="43.001001" long="-78.790839" />
+            <point lat="43.000493" long="-78.790839" />
+            <point lat="43.000493" long="-78.792723" />
+            <point lat="43.001001" long="-78.792723" />
+        </zone>
+        <zone name="Hochstetter and Cooke" size="8">
+            <point lat="43.002951" long="-78.790664" />
+            <point lat="43.002527" long="-78.790336" />
+            <point lat="43.002527" long="-78.790336" />
+            <point lat="43.002629" long="-78.790655" />
+            <point lat="43.002629" long="-78.792240" />
+            <point lat="43.002296" long="-78.792240" />
+            <point lat="43.002346" long="-78.791845" />
+            <point lat="43.002997" long="-78.791845" />
+        </zone>
+        <zone name="Talbert" size="8">
+            <point lat="43.000934" long="-78.790291" />
+            <point lat="43.000768" long="-78.790288" />
+            <point lat="43.000768" long="-78.789953" />
+            <point lat="43.000674" long="-78.789953" />
+            <point lat="43.000674" long="-78.790180" />
+            <point lat="43.000518" long="-78.790180" />
+            <point lat="43.000518" long="-78.790629" />
+            <point lat="43.000934" long="-78.790629" />
+        </zone>
+        <zone name="Capen" size="8">
+            <point lat="43.001270" long="-78.789055" />
+            <point lat="43.001103" long="-78.789055" />
+            <point lat="43.001103" long="-78.788950" />
+            <point lat="43.001016" long="-78.788950" />
+            <point lat="43.001016" long="-78.789174" />
+            <point lat="43.000522" long="-78.789174" />
+            <point lat="43.000522" long="-78.789938" />
+            <point lat="43.001270" long="-78.789938" />
+        </zone>
+        <zone name="Baldy" size="6">
+            <point lat="43.000567" long="-78.786439" />
+            <point lat="43.000213" long="-78.786439" />
+            <point lat="43.000213" long="-78.786583" />
+            <point lat="43.000323" long="-78.787583" />
+            <point lat="43.000323" long="-78.787565" />
+            <point lat="43.000567" long="-78.787365" />
+        </zone>
+        <zone name="OBrian" size="6">
+            <point lat="43.000579" long="-78.787570" />
+            <point lat="43.000235" long="-78.787570" />
+            <point lat="43.000235" long="-78.788539" />
+            <point lat="43.000579" long="-78.788539" />
+            <point lat="43.000701" long="-78.788191" />
+            <point lat="43.000695" long="-78.788191" />
+        </zone>
+        <zone name="Park Hall" size="10">
+            <point lat="42.999951" long="-78.787591" />
+            <point lat="42.999700" long="-78.787591" />
+            <point lat="42.999700" long="-78.787380" />
+            <point lat="42.999622" long="-78.787380" />
+            <point lat="42.999622" long="-78.787577" />
+            <point lat="42.999506" long="-78.787577" />
+            <point lat="42.999506" long="-78.787716" />
+            <point lat="42.999591" long="-78.787716" />
+            <point lat="42.999591" long="-78.788404" />
+            <point lat="42.999951" long="-78.788404" />
+        </zone>
+        <zone name="Jacobs" size="9">
+            <point lat="42.999959" long="-78.787223" />
+            <point lat="42.999838" long="-78.786851" />
+            <point lat="42.999711" long="-78.786707" />
+            <point lat="42.999711" long="-78.786420" />
+            <point lat="42.999595" long="-78.786420" />
+            <point lat="42.999361" long="-78.786512" />
+            <point lat="42.999361" long="-78.787380" />
+            <point lat="42.999700" long="-78.787380" />
+            <point lat="42.999736" long="-78.787373" />
+        </zone>
+        <zone name="Norton" size="8">
+            <point lat="43.001264" long="-78.788165" />
+            <point lat="43.000926" long="-78.788165" />
+            <point lat="43.000926" long="-78.788848" />
+            <point lat="43.000866" long="-78.788848" />
+            <point lat="43.000866" long="-78.788950" />
+            <point lat="43.001103" long="-78.788950" />
+            <point lat="43.001103" long="-78.788841" />
+            <point lat="43.001264" long="-78.788841" />
+        </zone>
+        <zone name="Knox" size="10">
+            <point lat="43.001278" long="-78.787460" />
+            <point lat="43.000919" long="-78.787460" />
+            <point lat="43.000860" long="-78.787577" />
+            <point lat="43.000803" long="-78.787913" />
+            <point lat="43.000803" long="-78.788073" />
+            <point lat="43.000860" long="-78.788153" />
+            <point lat="43.001264" long="-78.788165" />
+            <point lat="43.001264" long="-78.788048" />
+            <point lat="43.001225" long="-78.788048" />
+            <point lat="43.001278" long="-78.787976" />
+        </zone>
+        <zone name="Bonner" size="4">
+            <point lat="43.001673" long="-78.787812" />
+            <point lat="43.001375" long="-78.787812" />
+            <point lat="43.001375" long="-78.788503" />
+            <point lat="43.001673" long="-78.788503" />
+        </zone>
+        <zone name="Bell" size="4">
+            <point lat="43.001674" long="-78.786707" />
+            <point lat="43.001375" long="-78.786707" />
+            <point lat="43.001375" long="-78.787348" />
+            <point lat="43.001674" long="-78.787348" />
+        </zone>
+        <zone name="Lockwood" size="7">
+            <point lat="43.000602" long="-78.785707" />
+            <point lat="43.000491" long="-78.785707" />
+            <point lat="43.000374" long="-78.785853" />
+            <point lat="43.000374" long="-78.785698" />
+            <point lat="42.999879" long="-78.785698" />
+            <point lat="42.999879" long="-78.786385" />
+            <point lat="43.000602" long="-78.786385" />
+        </zone>
+        <zone name="SU" size="9">
+            <point lat="43.001560" long="-78.786242" />
+            <point lat="43.001447" long="-78.785823" />
+            <point lat="43.001155" long="-78.785669" />
+            <point lat="43.000860" long="-78.785676" />
+            <point lat="43.000860" long="-78.786134" />
+            <point lat="43.000857" long="-78.786803" />
+            <point lat="43.001227" long="-78.786788" />
+            <point lat="43.001227" long="-78.786648" />
+            <point lat="43.001560" long="-78.786648" />
         </zone>
     </sector>
 </controlled_region>
