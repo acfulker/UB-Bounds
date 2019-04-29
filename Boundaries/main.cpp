@@ -29,6 +29,8 @@ int setupSock();
 Coord packetRec(World* w, Agent* a);
 Agent depacketize(std::string pdu);
 double toDouble(std::string str);
+string packetize(double latitude, double longitude);
+
 #if defined( _MSC_VER )
 #if !defined( _CRT_SECURE_NO_WARNINGS )
 		#define _CRT_SECURE_NO_WARNINGS		// This test file is not intended to be secure.
@@ -160,7 +162,7 @@ Coord packetRec(World* w, Agent* a){
 
         return destination;
     }
-    return Coord(false);
+    return Coord(true);
 }
 
 Agent depacketize(std::string pdu){
@@ -170,6 +172,23 @@ Agent depacketize(std::string pdu){
     Coord loc = Coord(toDouble(inlat), toDouble(inlon));
     Agent a = Agent(loc, toDouble(inbear));
     return a;
+}
+
+string packetize(double latitude, double longitude){
+    string lat = to_string(latitude);
+    string lon = to_string(longitude);
+    if(lat[0] != '-'){
+        lat = '0'+lat;
+    }
+    if(lon[0] != '-'){
+        lon = '0'+lon;
+    }
+    lon+='0000000000';
+    lat+='0000000000';
+    lon=lon.substr(0, 9);
+    lat=lat.substr(0, 9);
+
+    return '01'+lat+lon;
 }
 
 double toDouble(std::string str){
@@ -187,12 +206,11 @@ double toDouble(std::string str){
 }
 
 int main(){
-//    string hexstr = "2d34382e3735313233";
-//    char str[hexstr.size()+1];
-//    strcpy(str,hexstr.c_str());
-//    cout << hexstr << endl << toDouble(hexstr) << endl;
+    int clientSock, n;
+    Agent a;
+    Coord dest;
+    string output;
     World* w = setupDB();
-//    Coord dest = packetRec(w);
     int sock = setupSock();
     listen(sock,10); //socket,backlog
     char buffer[256];
@@ -200,15 +218,22 @@ int main(){
     sockaddr_in clientAddr;
     socklen_t sin_size = sizeof(struct sockaddr_in);
     while(true) {
-        int clientSock = accept(sock,(struct sockaddr*)&clientAddr, &sin_size);
-        int n = read(clientSock, buffer, 500);
+        clientSock = accept(sock,(struct sockaddr*)&clientAddr, &sin_size);
+        n = read(clientSock, buffer, 500);
 //        cout << n << endl << buffer << endl;
         auto packet = json::parse(buffer);
         cout << packet["pdu"] << endl;
-        Agent a = depacketize(packet["pdu"].get<std::string>());
+        a = depacketize(packet["pdu"].get<std::string>());
         cout << a.lat << endl << a.lon << endl;
-        Coord dest = packetRec(w, &a);
-//        int w = write(clientSock,strcpy(buffer, packet["pdu"].get<std::string>()),strlen(buffer)+1);
+        dest = packetRec(w, &a);
+        if(!w->canFly(a)){
+            output = "0000000000000000000000";
+        }
+        else if{
+            output = packetize(dest.lat, dest.lon);
+        }
+
+        int w = write(clientSock,output,strlen(output)+1);
         bzero(buffer,256);
     }
     return 0;
