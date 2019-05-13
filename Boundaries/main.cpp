@@ -29,7 +29,7 @@ int setupSock();
 Coord packetRec(World* w, Agent* a);
 Agent depacketize(std::string pdu);
 double toDouble(std::string str);
-string packetize(double latitude, double longitude);
+std::string packetize(double latitude, double longitude);
 
 #if defined( _MSC_VER )
 #if !defined( _CRT_SECURE_NO_WARNINGS )
@@ -45,7 +45,7 @@ World *w;
 
 World* setupDB() {
     XMLDocument doc;
-    doc.LoadFile("testing.xml");
+    doc.LoadFile("boxes.xml");
 
     XMLNode * region = doc.FirstChild();
     if (region == nullptr) throw XML_ERROR_FILE_READ_ERROR;
@@ -116,7 +116,7 @@ int setupSock(){
     int sock = socket(AF_INET, SOCK_STREAM, 0); //domain IPv4, type, protocol
     sockaddr_in serverAddr;
     serverAddr.sin_family = AF_INET;
-    serverAddr.sin_port = htons(3306);
+    serverAddr.sin_port = htons(2662);
     serverAddr.sin_addr.s_addr = htonl(INADDR_ANY);
     //bind socket to port and address
     bind(sock,(struct sockaddr*)&serverAddr, sizeof(struct sockaddr));
@@ -166,9 +166,9 @@ Coord packetRec(World* w, Agent* a){
 }
 
 Agent depacketize(std::string pdu){
-    std::string inlat = pdu.substr(0,10); //set input latitude to first 10 payload values
-    std::string inlon = pdu.substr(10,10); //set input longitude to second set from payload
-    std::string inbear = pdu.substr(20,6); //set input bearing to last payload values
+    std::string inlat = pdu.substr(0,18); //set input latitude to first 10 payload values
+    std::string inlon = pdu.substr(18,18); //set input longitude to second set from payload
+    std::string inbear = pdu.substr(36,6); //set input bearing to last payload values
     Coord loc = Coord(toDouble(inlat), toDouble(inlon));
     Agent a = Agent(loc, toDouble(inbear));
     return a;
@@ -176,19 +176,21 @@ Agent depacketize(std::string pdu){
 
 string packetize(double latitude, double longitude){
     string lat = to_string(latitude);
-    string lon = to_string(longitude);
     if(lat[0] != '-'){
         lat = '0'+lat;
     }
+    lat+="0000000000";
+    lat=lat.substr(0, 9);
+
+    string lon = to_string(longitude);
     if(lon[0] != '-'){
         lon = '0'+lon;
     }
-    lon+='0000000000';
-    lat+='0000000000';
+    lon+="0000000000";
     lon=lon.substr(0, 9);
-    lat=lat.substr(0, 9);
 
-    return '01'+lat+lon;
+    string outstr = "01"+lon+lat;
+    return outstr;
 }
 
 double toDouble(std::string str){
@@ -229,11 +231,11 @@ int main(){
         if(!w->canFly(a)){
             output = "0000000000000000000000";
         }
-        else if{
-            output = packetize(dest.lat, dest.lon);
+        else{
+            output = packetize(dest.latitude, dest.longitude);
         }
 
-        int w = write(clientSock,output,strlen(output)+1);
+        int w = write(clientSock,output.c_str(),strlen(output.c_str())+1);
         bzero(buffer,256);
     }
     return 0;

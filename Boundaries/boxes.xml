@@ -1,6 +1,6 @@
 <controlled_region>
-    <sector name="1" north="43.005400" south="42.996000" east="-78.785400" west="-78.797200">
-        <zone name="Alumni Arena" size="4">
+    <sector name="1" north="43.005400" south="42.996000" east="-78.773200" west="-78.785400">
+        <zone name="Alumni Arena" size="10">
             <point lat="43.000908" long="-78.780660" />
             <point lat="43.000605" long="-78.780660" />
             <point lat="43.000605" long="-78.780374" />
@@ -89,7 +89,7 @@
             <point lat="43.002157" long="-78.780270" />
         </zone>
     </sector>
-    <sector name="2" north="43.005400" south="42.99600" east="-78.773200" west="-78.785400">
+    <sector name="2" north="43.005400" south="42.99600" east="-78.785400" west="-78.797200">
         <zone name="Commons" size="7">
             <point lat="43.002243" long="-78.784289" />
             <point lat="43.001943" long="-78.784148" />
