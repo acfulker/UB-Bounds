@@ -1,5 +1,5 @@
 //
-// Created by Andrew Fulkerson on 10/22/18.
+// Created by Andrew Fulkerson and Anna Sholk on 10/22/18.
 //
 
 #include "Coord.h"
@@ -20,16 +20,16 @@ double Coord::sinDeg(double deg){
  */
 double Coord::distanceTo(Coord &other) {
     double m1 = 111132.92;        // latitude calculation term 1
-    double m2 = -559.82;        // latitude calculation term 2
+    double m2 = -559.82;          // latitude calculation term 2
     double m3 = 1.175;            // latitude calculation term 3
-    double m4 = -0.0023;        // latitude calculation term 4
+    double m4 = -0.0023;          // latitude calculation term 4
     double p1 = 111412.84;        // longitude calculation term 1
     double p2 = -93.5;            // longitude calculation term 2
     double p3 = 0.118;            // longitude calculation term 3
 
     double latlen = m1 + (m2 * cosDeg(latitude)) + (m3 * cosDeg(4 * latitude)) + (m4 * cosDeg(6 * latitude)); //to feet
     double longlen = (p1 * cosDeg(latitude)) + (p2 * cosDeg(3 * latitude)) + (p3 * cosDeg(5 * latitude));//to feet
-    
+
     double tempx = abs(longitude - other.longitude) * longlen;
     double tempy = abs(latitude - other.latitude) * latlen;
 

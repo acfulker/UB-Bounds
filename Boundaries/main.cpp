@@ -1,3 +1,10 @@
+/*
+ *  Andrew Fulkerson and Anna Sholk
+ *  May 2019
+ */
+
+
+
 #include <iostream>
 #include <cerrno>
 #include <cstdlib>

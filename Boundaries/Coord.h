@@ -1,5 +1,5 @@
 //
-// Created by Andrew Fulkerson on 10/22/18.
+// Created by Andrew Fulkerson and Anna Sholk on 10/22/18.
 //
 
 #ifndef BOUNDARIES_COORD_H
